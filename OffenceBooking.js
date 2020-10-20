@@ -1,4 +1,4 @@
-function SetWLOffenceSections(cNatureOfOffence,cOffenceLocation,cCompany,cNationality){ 
+function SetWLOffenceSections(cNatureOfOffence,cOffenceLocation,cCompany,cNationality){
 	var OffenceSections =  getWLOffenceSections(cNatureOfOffence,cOffenceLocation,cCompany)
 	this.getField("txtViolationOfLaw").value = OffenceSections
 }
@@ -36,7 +36,7 @@ function getWLOffenceSections(cNatureOfOffences,cOffenceLocation,cCompany){
 		if (cOffenceLocation=="NP" || cOffenceLocation=="Sanctuary") {
 			if ((nonCompoundable.indexOf(","+cNatureOfOffences[i]+cOffenceLocation+",")!= -1))
 				mainSec = mainSec.replace("54,", "")
-			else 
+			else
 				mainSec = mainSec.replace("54(4),", "")
 		}
 	}
@@ -85,14 +85,14 @@ function SetWLOffencePenalty(cNatureOfOffence,cOffenceLocation,cCompany,cNationa
 
 	penaltyObject = wlOffencePenalty[cOffenceLocation]
 	if (penaltyObject != undefined) {
-		penalty = penaltyObject.Penalty 
+		penalty = penaltyObject.Penalty
 		imprisonment = penaltyObject.ImprisonmentAndFine
 	}
 
 	// Highest Priority punishment
 	penaltyObject = wlOffencePenalty[NatureOfOffence+cOffenceLocation]
 	if (penaltyObject != undefined) {
-		penalty = penaltyObject.Penalty 
+		penalty = penaltyObject.Penalty
 		imprisonment = penaltyObject.ImprisonmentAndFine
 	}
 
@@ -126,18 +126,18 @@ function setWLOffenceNonCompoundable(cNatureOfOffence,cOffenceLocation){
 
 	//console.println("nonCompoundable:"+nonCompoundable+":displayString:"+ displayString)
 
-	if ((nonCompoundable.indexOf(","+cNatureOfOffence+",")!= -1) || (nonCompoundable.indexOf(","+cOffenceLocation+",")!= -1) || 
-		(nonCompoundable.indexOf(String(cNatureOfOffence+cOffenceLocation))!= -1)){		
-		if (cOffenceLocation.indexOf("TRCore") != -1) 
+	if ((nonCompoundable.indexOf(","+cNatureOfOffence+",")!= -1) || (nonCompoundable.indexOf(","+cOffenceLocation+",")!= -1) ||
+		(nonCompoundable.indexOf(String(cNatureOfOffence+cOffenceLocation))!= -1)){
+		if (cOffenceLocation.indexOf("TRCore") != -1)
 		      displayString = "Any Offence in Tiger Reserve Core Area is non compoundable offence as per Sec. 51(1C)(1D) of WL(P) Act 1972"
-		else if (displayString.indexOf("1972")== -1) 
+		else if (displayString.indexOf("1972")== -1)
 		      displayString = displayString + " is non compoundable offence as per Sec. 51(1), 54(4) of WL(P) Act 1972"
-		
+
 		cCompoundable ="Non-Compoundable, How?"
 		field.toolTip = displayString
 	} else {
 		cCompoundable ="Compoundable, How?"
-		displayString = displayString + ", offence can be compoundable as per Sec. 51(1),54 of WL(P) Act"		
+		displayString = displayString + ", offence can be compoundable as per Sec. 51(1),54 of WL(P) Act"
 	}
 	field.buttonSetCaption(cCompoundable)
 	field.userName = displayString
@@ -152,7 +152,7 @@ function getOffenceSections(cNatureOfOffences,cOffenceForestProduce,cOffenceLoca
 
 	var cOffenceCategory = cOffenceForestProduce + cOffenceLocation
 	//console.println("CNatureOfOffences:"+cNatureOfOffences + ":cOffenceCategory:"+ cOffenceCategory)
-	
+
 	//TR other than Core area, NP and Sanctuary offence sections are same as RF. This is to avoid larger number definition.
 	//Also add "DisturbWLLifecycle" to include WL related sections
 	if (cOffenceLocation=="TRBuffer"|| cOffenceLocation =="NP"||cOffenceLocation=="Sanctuary"){
@@ -168,13 +168,13 @@ function getOffenceSections(cNatureOfOffences,cOffenceForestProduce,cOffenceLoca
 		                         offence = offence.concat(forestOffenceSections["Common"][cNatureOfOffences[i]])
 			else
 		                          offence = offence.concat(forestOffenceSections[cOffenceLocation][cNatureOfOffences[i]])
-		else     
+		else
 		             offence = offence.concat(forestOffenceSections[cOffenceCategory][cNatureOfOffences[i]])
 	}
 
 	//Sort the array to get the law in sequence then process each array element.
 	//Split Law name and its section in two array elements using preformated "$" symbol (Pre-requirement)
-	//If a same law available more than once, join those sections, second element (ie. array[1]) 
+	//If a same law available more than once, join those sections, second element (ie. array[1])
 	//and then remove duplicate sections.
 	offence.sort()
 	var actName ="", previousActName ="", sections="", eachLaw =[], outputArray = []
@@ -187,15 +187,15 @@ function getOffenceSections(cNatureOfOffences,cOffenceForestProduce,cOffenceLoca
 			}else if (offence[i].indexOf("TN.R.W Trees (c)") != -1)
 				offence[i] = offence[i] + "7,"
 			else if (offence[i].indexOf("B.D.Act") != -1)
-				offence[i] = offence[i] + "57,"			
-		}	
- 
+				offence[i] = offence[i] + "57,"
+		}
+
 		eachLaw = offence[i].split("$")                             // Split the Law name and its sections
 		actName = eachLaw[0]
-		
+
 		//If "$" symbol is missing, consider as general instruction
 		if (eachLaw[1] == undefined || eachLaw[1]==""){
-		//	Save the existing information in an arry element	
+		//	Save the existing information in an arry element
 			if (previousActName !=" ")
 				outputArray.push(previousActName + removeDuplicates(sections))
 			outputArray.push(eachLaw[0])
@@ -234,7 +234,7 @@ function getOffencePenalty(cNatureOfOffences,cOffenceLocation,cOffenceForestProd
 	var penaltyObject = []
 	var cOffenceCategory = cOffenceForestProduce + cOffenceLocation
 	//console.println("CNatureOfOffences:"+cNatureOfOffences + ":cOffenceCategory:"+ cOffenceCategory)
-	
+
 	//TR other than Core area, NP and Sanctuary offence sections are same as RF. This is to avoid larger number definition.
 	if (cOffenceLocation=="TRBuffer"|| cOffenceLocation =="NP"||cOffenceLocation=="Sanctuary"){
 		cOffenceCategory =cOffenceForestProduce + "RF"
@@ -261,7 +261,7 @@ function getOffencePenalty(cNatureOfOffences,cOffenceLocation,cOffenceForestProd
 	for (i=0; i<penaltyObject.length; i++) {
 		eachLaw = forestOffencePenalty[penaltyObject[i]]["Penalty"]
 		actName = eachLaw[0]
-		
+
 		if ( i==0 || previousActName == actName){
 			sections = sections + "," +eachLaw[1]
 			imprisonment.push((forestOffencePenalty[penaltyObject[i]]["ImprisonmentAndFine"]).toString())
@@ -299,7 +299,7 @@ function removeDuplicateArrayElements(arraySec) {
 
 function chooseTopThreeImprisonmentDemand(aImprison){
 	var imprison = removeDuplicateArrayElements(aImprison)
-	
+
 	//Include the logic to choose top three imprisonment ( Priority to larger "Shall be", then Larger "may be", then "open fine", then "larger fine"
 	if (imprison.length>3) {
                       imprison.splice(3,imprison.length-3)
@@ -345,7 +345,7 @@ function setLogVolumeAndCompoundingMessage(cSeizureFP,cOffenceType){
 	      this.getField("txtTotalSeizureValue").value= (this.getField("txtValue.0").value +  this.getField("txtValue.1").value +  this.getField("txtValue.2").value)
 	      var quantity = ((this.getField("txtSeizerQuantity.0").value +  this.getField("txtSeizerQuantity.1").value +  this.getField("txtSeizerQuantity.2").value))
 	      quantity = isNaN(quantity)?"":quantity.toFixed(3)
-	      this.getField("txtTotalSeizureQuantity").value= quantity 
+	      this.getField("txtTotalSeizureQuantity").value= quantity
 	}
 
 	if(cOffenceType =="ST" && this.getField("txtTotalSeizureValue").value>=10000 && cSeizureFP!="Sandal"){
@@ -371,9 +371,13 @@ function loadFormData(cChangeEx){
 	} else {
 		  this.resetForm(["txtViolationOfLaw","txtPenaltySection","txtPunishmentPeriod","cbOffenceLocation","cbForestProduce","lbNatureOfOffence","txtRichText"])
 		  this.getField("pbCompoundable").buttonSetCaption("Non-Compoundable, How?")
-		  this.getField("pbCompoundable").userName = "Is this compoundable offence?"
+			if (cChangeEx =="BD") {
+					this.getField("pbCompoundable").userName = "All BD offences are non-compoundable, as there is no provision to compound in BD Act."
+			}else {
+		  		this.getField("pbCompoundable").userName = "Is this compoundable offence?"
+			}
 		  if (cChangeEx !="") {
-			  LoadLocationDropDown(cChangeEx) 
+			  LoadLocationDropDown(cChangeEx)
 			  LoadForestProduceDropDown(cChangeEx)
 			  LoadNatureOfOffenceDropDown(cChangeEx,"")
 			  LoadSeizureFPDropDown(cChangeEx)
@@ -385,7 +389,7 @@ function loadFormData(cChangeEx){
 			  setEnableLogFields(0)
 		  } else if (cChangeEx =="WL" || cChangeEx =="BD") {
 			  setEnableLogFields(1)
-		  }   
+		  }
 	}
 }
 
@@ -393,7 +397,7 @@ function loadFormData(cChangeEx){
 function loadNatureOfOffence(cChangeEx,cFP){
 	if (this.getField("cbLockChanges").value=="Yes") {
 		  app.alert("Lock changes check box is enabled. Remove the check if you want to reload violation.")
-	} else { 
+	} else {
 		  this.resetForm(["txtViolationOfLaw","txtPenaltySection","txtPunishmentPeriod"])
 		  this.getField("pbCompoundable").value = "Non-Compoundable, How?"
 		  if (this.getField("cbOffenceType").value !="WL" && cChangeEx!="")
@@ -425,7 +429,7 @@ function loadViolationOfLaw() {
 		      SetWLOffencePenalty(offence,offenceLocation.value,offenceCompany.value,offenderNationality.value)
 		 } else {
 		     SetOffenceSections(offence,offenceLocation.value,forestProduce.value,offenceCompany.value,offenderNationality.value)
-		     SetOffencePenalty(offence,offenceLocation.value,forestProduce.value,offenceCompany.value,offenderNationality.value)  
+		     SetOffencePenalty(offence,offenceLocation.value,forestProduce.value,offenceCompany.value,offenderNationality.value)
 		 }
 
 		if ( this.getField("txtViolationOfLaw").value  == "Not Applicable") {
@@ -433,7 +437,7 @@ function loadViolationOfLaw() {
 		     this.getField("txtPunishmentPeriod").value = "Not Applicable"
 		}
 	  }
-	
+
 }
 
 //onMouseUp of "Non-Compoundable, How?" button call the displayCompoundableMessage function
@@ -457,7 +461,7 @@ function displayCompoundableMessage(){
 		 if (FP=="" || FP=="Select" || value=="" || Qty==""){
 			    alertObject.cMsg = "Select the Seizure Forest Produce, set its value and seziure quantity"
 			    this.getField("pbCompoundable").userName = "Select the Seizure Forest Produce, set its value and seziure quantity"
-			    alertObject.nIcon = 0 
+			    alertObject.nIcon = 0
 		 } else {
 			    alertObject.cMsg = this.getField("pbCompoundable").userName
 			    alertObject.nIcon = 3
@@ -475,7 +479,7 @@ function getNatureOfOffence(){
 	else{  // Multiple selection
 		for (var i=0;i<indices.length;i++) {
 		     var offenceNature = offenceList.getItemAt(indices[i],true)
-		     // Exception requirement for WL offence: Combination of Hunting and Scheduled Animal needs to be punished under interjunction penalty. 
+		     // Exception requirement for WL offence: Combination of Hunting and Scheduled Animal needs to be punished under interjunction penalty.
 		     // To meet this requirement, hunting needs to be in array index zero.
 		     if (offenceNature =="Hunting" && offence[0] !="ScheduledAnimal")
 			     offence[0]=offenceNature
@@ -488,27 +492,29 @@ function getNatureOfOffence(){
 
 function getUsageTips() {
 	var usageTips = "Use this interactive form for the following requirement " +
-	"\r \r1. To know Forest, WL and BD law sections for an offence. " + 
-	"\r           Fill Blue color and italic font form fields and then click \"Load Law Violations\" button." +
-	"\r \r2. To know an offence is compoundable or non-compoundable and its law reference. " + 
-	"\r           a) For WL offence, load the offence details mentioned in point 1 and then " + 
-	"\r           click \"Non-Compoundable, How?\" button." + 
+	"\r \r1. To know Forest, WL and BD law sections for an offence. " +
+	"\r           Fill Blue color and italic font form fields and then click \"Load Law Violations\" button. Select all possible offences in \"Nature of Offence\" list box by holding CTRL key." +
+	"\r \r2. To know an offence is compoundable or non-compoundable and its law reference. " +
+	"\r           a) For WL offence, load the offence details mentioned in point 1 and then " +
+	"\r           click \"Non-Compoundable, How?\" button." +
 	"\r           b) For ST/Non-ST, load the FP seizure details and then click \"Non-Compoundable, How?\" button." +
 	"\r \r3. To know ST/Non-ST Timber volume calculation. (Formally known as Quater Girth formula)" +
-	"\r           a) Fill Seizure FP, Length, mid-diameter (centimetre) to auto populate Volume in cubic meters." + 
+	"\r           a) Fill Seizure FP, Length, mid-diameter (centimetre) to auto populate Volume in cubic meters." +
 	"\r           b) Volume calculation is not applicable for Sandal Wood." +
-	"\r \r4. To generate case documents for Seizure List, Measurement List, Confession Statement, Spot Magazar, Remand Report, Bail Objection and Form A." + 
+	"\r \r4. To generate case documents for Seizure List, Measurement List, Confession Statement, Spot Magazar, Remand Report, Bail Objection and Form A." +
 	"\r           a) Fill all the form fields." +
 	"\r           b) Make the required changes (remove unwanted sections) in \"Violation of Law \" field." +
 	"\r              Enable the \"Lock Section changes\" Checkbox to prevent accidental changes." +
 	"\r           c) Choose the report that you want to generate and then click \"Generate Report\" button."+
 	"\r           d) Copy the data populated in page 2 to MS word and make further required changes." +
-	"\r           e) Use \"Save Form Data\" button to save this data in the local system(\"D:\ForestOffence.fdf\"). " + 
+	"\r           e) Use \"Save Form Data\" button to save this data in the local system(\"D:\ForestOffence.fdf\"). " +
 	"\r               You can send this file to anyone or save it for later usage." +
 	"\r           f) Use \"Load Form Data\" to load the previously saved data." +
 	"\r           g) Use \"Import Form Data\" to load external form data." +
 	"\r \r Known restrictions:"+
 	"\r     1) \"Save form data\" don't work in Adobe Reader. Adobe don't allow to save data locally through scripting. Use Foxit reader to get rid of this issue." +
-	"\r     2) Mobile device: Use Foxit PDF Android/iOS version. \"Adobe form\" Android App is not supporting interactive form well." 
+	"\r     2) Mobile device: Use Foxit PDF Android/iOS version. \"Adobe form\" Android App is not supporting interactive form well." +
+	"\r     3) For BD Act, Prosecution documents or reports are not available now." +
+	"\r \r For more information read each form field's tooltip (Mose over)."
 	app.alert({cMsg:usageTips,nIcon:3})
 }

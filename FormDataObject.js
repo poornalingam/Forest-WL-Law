@@ -23,7 +23,7 @@ function setOffenceDetails(){
 	offenceDetails["PenaltySection"]= this.getField("txtPenaltySection").value
 	offenceDetails["PunishmentPeriod"]= this.getField("txtPunishmentPeriod").value
 
-	// This logic is specific to handle "BlackWood" 
+	// This logic is specific to handle "BlackWood"
 	var FP =""
 	var forestProduce = this.getField("cbForestProduces").getArray()
 	if (forestProduce[0].value =="")
@@ -110,13 +110,13 @@ function setNatureofOffence() {
 	else {
 	  for (var i=0; i<a.length;i++)
 	      offence.push(f.getItemAt(a[i],false))
-	} 
+	}
 	offenceDetails["NatureOfOffence"]= offence
 }
 
-/*function setOffenceLocation(cChange) {
+function setOffenceLocation(cChange) {
 	offenceDetails["OffenceLocation"]= cChange
-}*/
+}
 
 function setMiscDetails() {
 	offenceDetails["SeizureFPTotalValue"]= this.getField("txtTotalSeizureValue").value
