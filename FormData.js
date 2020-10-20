@@ -25,7 +25,7 @@ var dropdownFillData = {
 			["Black Wood","Teak"]
 		],
 		NatureOfOffence:[""],
-		Seizure: 
+		Seizure:
 		[
 			["Select","Select"],
 			["Teak","Teak"],
@@ -59,14 +59,14 @@ var dropdownFillData = {
 			["National Park","NP"],
 			["Sanctuary","Sanctuary"]
 		],
-		ForestProduce: 
+		ForestProduce:
 		[
 			["Select","Select"],
 			["Exempted Species","ExemptedSpecies"],
 			["Non-Exempted Species","NonExemptedSpecies"]
 		],
 		NatureOfOffence:[""],
-		Seizure: 
+		Seizure:
 		[
 			["Select","Select"],
 			["Exempted Species","Exempted Species"],
@@ -97,10 +97,10 @@ var dropdownFillData = {
 			["Specified Plant","SpecifiedPlant"]
 		],
 		ForestProduce: [""],
-		NatureOfOffence: 
+		NatureOfOffence:
 		[
 			["Any offence related to Scheduled Animal","ScheduledAnimal"],
-			["Hunting and Its attempt","Hunting"],
+			["Hunting / Attempt to Hunt","Hunting"],
 			["Alteration of Boundary","AlterationOfBoundary"],
 			["Transporting","Transporting"],
 			["Possession of WL or Specified Plant","Possession"],
@@ -125,7 +125,9 @@ var dropdownFillData = {
 			["Skin","Skin"],
 			["By Product","By Product"],
 			["Trophy","Trophy"],
-			["Nest, Egg, Young WL","Damage Habitat"]
+			["Nest, Egg, Young WL","Damage Habitat"],
+			["Camping Materials","Camping Materials"],
+			["Other Materials","Other Materials"]
 		],
 		Reports:[
 			["Select","Select"],
@@ -140,7 +142,7 @@ var dropdownFillData = {
 	},
 	BD:{
 		Location:[["Any Location","AnyLocation"]],
-		ForestProduce: 
+		ForestProduce:
 		[
 			["Select","Select"],
 			["Exempted BD Species","ExemptedBDSpecies"],
@@ -154,22 +156,13 @@ var dropdownFillData = {
 			["Illegal Transfer of knowledge","IllegalTransferKnowledge"],
 			["Breaking and disobey - Order","BreakingDisobeyOrder"]
 		],
-		Seizure: 
+		Seizure:
 		[
 			["Select","Select"],
 			["Exempted BD Species","Exempted BD Species"],
 			["Non-Exempted BD Species","NonExempted BD Species"]
-                ],
-		Reports:[
-			["Select","Select"],
-			["Seizure List","SeizureList"],
-			["Measurement List","MeasurementList"],
-			["Confession Statement","ConfessionStatement"],
-			["Spot Magazar","SpotMagazar"],
-			["Remand Report","RemandReport"],
-			["Bail Objection","BailObjection"],
-			["Form A","FormA"]
-		]
+    ],
+		Reports:[]
 	},
         RF:{
 		NatureOfOffence:[
@@ -285,7 +278,7 @@ var dropdownFillData = {
 		[
 			["Cut, Transport, Possession","Possession"],
 			["Cutting which inturn disturbed WL habitat","DisturbWLLifecycle"]
-		]       
+		]
 	},
         NonExemptedSpecies:{
 		NatureOfOffence:
@@ -295,7 +288,7 @@ var dropdownFillData = {
                 ]
 	},
 	AnyLocation:{
-		NatureOfOffence: 
+		NatureOfOffence:
 		[
 			["Possession-Indian","Possession"],
 			["Possession-NRI or Foreigner","PossessionNRIForeigner"],
@@ -325,9 +318,9 @@ var dropdownFillData = {
 	}
 }
 
-function LoadNatureOfOffenceDropDown(key1,key2){   
+function LoadNatureOfOffenceDropDown(key1,key2){
 	//console.println("Load Nature of offence:Key1"+key1+": Key2:"+key2)
-	//Populate combo and list box fields with values from the Forest location type Data Object 
+	//Populate combo and list box fields with values from the Forest location type Data Object
 	var NatureOfOffence = []
 	if (key1 !="" && key1 !="Select") {
 		if (dropdownFillData[key1] != undefined)
@@ -341,8 +334,8 @@ function LoadNatureOfOffenceDropDown(key1,key2){
 		}
 	}
 
-	//console.println("Load Nature of offence:Length:"+NatureOfOffence.length)    
-	if (NatureOfOffence.length > 0)   
+	//console.println("Load Nature of offence:Length:"+NatureOfOffence.length)
+	if (NatureOfOffence.length > 0)
 		this.getField("lbNatureOfOffence").setItems(NatureOfOffence)
 	else
 		this.getField("lbNatureOfOffence").clearItems()
@@ -350,43 +343,43 @@ function LoadNatureOfOffenceDropDown(key1,key2){
 
 
 function LoadLocationDropDown(key) {
-	// Populate fields with values from the Forest location type Data Object 
+	// Populate fields with values from the Forest location type Data Object
 	if (key !="" && key !="Select")
-		this.getField("cbOffenceLocation").setItems(dropdownFillData[key].Location) 
+		this.getField("cbOffenceLocation").setItems(dropdownFillData[key].Location)
 }
 
 function LoadSeizureFPDropDown(key) {
-	// Populate fields with values from the Seizure Data Object 
+	// Populate fields with values from the Seizure Data Object
 	var seizure = dropdownFillData[key].Seizure
-	this.getField("cbForestProduces.0").setItems(seizure) 
-	this.getField("cbForestProduces.1").setItems(seizure) 
-	this.getField("cbForestProduces.2").setItems(seizure) 
+	this.getField("cbForestProduces.0").setItems(seizure)
+	this.getField("cbForestProduces.1").setItems(seizure)
+	this.getField("cbForestProduces.2").setItems(seizure)
 }
 
 function SetDefaultSeizureFPMeasurement(cOffenceType,cFP){
    if (cOffenceType=="WL") {
-		this.getField("cbQuantity.0").currentValueIndices = 3 
-		this.getField("cbQuantity.1").currentValueIndices = 3 
-		this.getField("cbQuantity.2").currentValueIndices = 3 
+		this.getField("cbQuantity.0").currentValueIndices = 3
+		this.getField("cbQuantity.1").currentValueIndices = 3
+		this.getField("cbQuantity.2").currentValueIndices = 3
    } else if (cOffenceType=="BD" || cFP == "Sandal") {
-		this.getField("cbQuantity.0").currentValueIndices = 2 
-		this.getField("cbQuantity.1").currentValueIndices = 2 
-		this.getField("cbQuantity.2").currentValueIndices = 2 
+		this.getField("cbQuantity.0").currentValueIndices = 2
+		this.getField("cbQuantity.1").currentValueIndices = 2
+		this.getField("cbQuantity.2").currentValueIndices = 2
    } else{
-		this.getField("cbQuantity.0").currentValueIndices = 1 
-		this.getField("cbQuantity.1").currentValueIndices = 1 
-		this.getField("cbQuantity.2").currentValueIndices = 1 
+		this.getField("cbQuantity.0").currentValueIndices = 1
+		this.getField("cbQuantity.1").currentValueIndices = 1
+		this.getField("cbQuantity.2").currentValueIndices = 1
    }
 }
 
 function LoadForestProduceDropDown(key){
 	//Populate Forest Produce drop ddown
 	if (key !="" && key !="Select")
-		this.getField("cbForestProduce").setItems(dropdownFillData[key].ForestProduce) 
+		this.getField("cbForestProduce").setItems(dropdownFillData[key].ForestProduce)
 }
 
 function LoadReports(key){
 	//Populate Reports drop ddown
 	if (key !="" && key !="Select")
-		this.getField("cbReportGeneration").setItems(dropdownFillData[key].Reports) 
+		this.getField("cbReportGeneration").setItems(dropdownFillData[key].Reports)
 }
