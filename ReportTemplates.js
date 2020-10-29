@@ -197,7 +197,6 @@ function initializeTemplateValues(cTemplateName,cOffenceType,cNatureOfOffence) {
 			formFieldValues[++iIndex] = "\r    5. | " + getVehicleSeizure(1)
 			formFieldValues[++iIndex] = "\r    6. | " + getOtherSeizure(0)
 			formFieldValues[++iIndex] = "\r    7. | " + getOtherSeizure(1)
-			formFieldValues[++iIndex] = "\r \rAbove logs are seized by the forest officials under Sec. 41 of TNF Act 1882 on "+  util.printd("mm/dd/yyyy", new Date()) + " at ______ am/pm in H form number ________ dated ___________."
 			formFieldValues[++iIndex] = "\r \rThis list prepared by me                                             Prepared before me"
 			formFieldValues[++iIndex] = "\r \r Sd.____________________________	               Sd.____________________________"
 			formFieldValues[++iIndex] = "\r " + String(offenceDetails["ForestOfficerName"]) +"                                   FRO," + String(offenceDetails["Range"])
@@ -243,7 +242,7 @@ function initializeTemplateValues(cTemplateName,cOffenceType,cNatureOfOffence) {
 				formFieldValues[iIndex] = "Spot Magazar\r"
 				formFieldValues[++iIndex] = "\r " + util.printd("mm/dd/yyyy", new Date())
 				formFieldValues[++iIndex] = "\r \r" + String(offenceDetails["ForestOfficerName"]) + " of " + String(offenceDetails["Range"]) + " and their subordinates inspected the " + getPlaceOfDetection(false) + ". The sawmill/house owner and two independent witnesses were present during this full course of inspection."
-				formFieldValues[++iIndex] = "\r \rThe forest official identified more than 0.5 Cubic meter of illegal possession of " + String(offenceDetails["ForestProduce"]) + " logs without hammer axe, valid transit permit, the accounts of receipt and disposal of logs (Ie. Form III & IV) not maintained according to	law. Forest official seized these illegal possession of scheduled timber logs under Sec. 41 of TNF Act 1882 and prepared the list of seizure. Handed over the duplicate copy of 'list of seized properties' to sawmill/house owner and received the acknowledgement in the original list of	properties statement."
+				formFieldValues[++iIndex] = "\r \rThe forest official identified more than 0.5 Cubic meter of illegal possession of " + String(offenceDetails["ForestProduce"]) + " logs without hammer axe, valid transit permit, the accounts of receipt and disposal of logs (Ie. Form III & IV) not maintained according to	TN Regulation of Wood Based Industry Rules 2010 Sec. 7 & 8. Forest official seized these illegal possession of scheduled timber logs under Sec. 41 of TNF Act 1882 and prepared the list of seizure. Handed over the duplicate copy of 'list of seized properties' to sawmill/house owner and received the acknowledgement in the original list of	properties statement."
 				formFieldValues[++iIndex] = "\r \rThe forest officials have taken the seized materials to produce before the authorized officer (DFO/DCF) as per Sec. 41(3)(a), 49A, 49G(a) of TNF Act 1882."
 				formFieldValues[++iIndex] = "\r \rExcept these seized materials, no other materials have not been taken or seized by the forest officials from the sawmill/house. During this inspection, the sawmill/house owner and staff/other members have not harassed and no damage or loss to the sawmill."
 				formFieldValues[++iIndex] = "\r \rThis spot magazar is recorded before me, it was read to me, I heard it clearly/ (Or I read it) and it is true."
@@ -259,7 +258,7 @@ function initializeTemplateValues(cTemplateName,cOffenceType,cNatureOfOffence) {
 				iIndex=0
 				formFieldValues[iIndex] = "Magazar \r"
 				formFieldValues[++iIndex] = "\r" + util.printd("mm/dd/yyyy", new Date())
-				formFieldValues[++iIndex] = "\r \r" + getVehicleDetails() + " loaded with " + String(offenceDetails["ForestProduce"]) + " logs stopped and inspected the transit permit near " + getPlaceOfDetection(false) + " by " + String(offenceDetails["ForestOfficerName"]) + " of " + String(offenceDetails["Range"]) + "and their subordinates during their on-road raid. The vehicle didn�t carry valid permit. Further, forest official checked the vehicle and found the illegally cut and transported from " + getPlaceOfOffence(false) +"."
+				formFieldValues[++iIndex] = "\r \r" + getVehicleDetails() + " loaded with " + String(offenceDetails["ForestProduce"]) + " logs stopped and inspected the transit permit near " + getPlaceOfDetection(false) + " by " + String(offenceDetails["ForestOfficerName"]) + " of " + String(offenceDetails["Range"]) + "and their subordinates during their on-road raid. The vehicle didn�t carry valid permit at the time of transit. Further, forest official checked the vehicle and on inquiry came to know the illegally cut and transported from " + getPlaceOfOffence(false) +"."
 				formFieldValues[++iIndex] = "\r \rThe below signed offenders illegally trespassed, cut and transported the " +  String(offenceDetails["ForestProduce"]) + " logs from "+ String(offenceDetails["OffenceLocation"]) +" Plantation is against the Forest law. Forest official seized the forest produce, Vehicle and cutting & packing materials at the spot and brought to " + String(offenceDetails["Range"]) +" range office. Forest officials offloaded the logs, prepared the measurement list and hammer	mark of _______(example: Andipatti) Section are affixed in the logs, prepared the list of seizures and got the offenders signature with two independent local witnesses from _______ Village, recorded the confession statement from the accused."
 				formFieldValues[++iIndex] = "\r \rThis magazar is recorded before me, it was read to me, I heard it clearly/ (Or I read it) and it is true."
 				formFieldValues[++iIndex] = "\r \rA1) Sd._______________________________________"
@@ -292,7 +291,7 @@ function initializeTemplateValues(cTemplateName,cOffenceType,cNatureOfOffence) {
 			iIndex=0
 			formFieldValues[iIndex] = "NOTICE ISSUED UNDER SECTION 49 B OF TAMILNADU FOREST ACT 1882\r"
 			formFieldValues[++iIndex] = "\r \rFOR / STOR " + String(offenceDetails["OffenceReportNo"]) + "                                                                    Authorized Officers and"
-			formFieldValues[++iIndex] = " \r                                                                                   District Forest Officer//Wildlife warden"
+			formFieldValues[++iIndex] = " \r                                                                                   District Forest Officer"
 			formFieldValues[++iIndex] = " \r                                                                                   __________________________"
 			formFieldValues[++iIndex] = " \r                                                                                   __________________________"
 
@@ -326,7 +325,7 @@ function initializeTemplateValues(cTemplateName,cOffenceType,cNatureOfOffence) {
 			formFieldValues[++iIndex] = "\rSubject:"
 			formFieldValues[++iIndex] = " Request for remanding the accused related to scheduled timber offence under Sec 200 of Cr.P.C � regarding"
 			formFieldValues[++iIndex] = "\r \r" + String(offenceDetails["Range"]) + " range forest officials caught the below list of accused during their inspection/raid. The accused trespassed the "+ String(offenceDetails["OffenceLocation"]) +", cut three living scheduled timber "+ String(offenceDetails["ForestProduce"]) + " trees, converted to logs and being loaded in " + getVehicleDetails() + " which is violation of forest law. The forest official got the offender details and seized the produce with vehicle under section 41 of TNF Act 1882 and brought to " + String(offenceDetails["Range"]) + " range office. Offence has been booked under"
-			formFieldValues[++iIndex] = "\r" + String(offenceDetails["ViolationOfLaw"])
+			formFieldValues[++iIndex] = "\r \r" + String(offenceDetails["ViolationOfLaw"])
 			formFieldValues[++iIndex] = "\r \rIts punishable under sections"
 			formFieldValues[++iIndex] = "\r" + String(offenceDetails["PenaltySection"])
 			formFieldValues[++iIndex] = "\r \rFor a period of"
@@ -356,7 +355,7 @@ function initializeTemplateValues(cTemplateName,cOffenceType,cNatureOfOffence) {
 			formFieldValues[++iIndex] = "\r 2) TN Forest Act 1882 Sec. 56B, 56C, 56D"
 			formFieldValues[++iIndex] = "\r \r"+ String(offenceDetails["ForestProduce"]) +" scheduled timber offence booked against the accused as per 1st reference sighted above and accused remanded in judicial custody on <offence booking date>. We came to know that the accused filed the bail petition in this honorable court. I bring the 2nd reference sighted above to your kind attention. It�s a scheduled timber offence, non-bailable as per section 56B, cognizable offence as per section 56C and presumption as to commission of the offence as per 56D of TNF Act 1882."
 			formFieldValues[++iIndex] = "\r \rIt�s a premeditated forest offence against public property in "+ String(offenceDetails["OffenceLocation"]) +". We are in preliminary investigation stage to perambulate the offence location, seizing the forest produce are still in progress and searching other offenders as well. Releasing the accused on bail will affect the investigation process and the accused will tamper the evidence. The accused violated the following laws"
-			formFieldValues[++iIndex] = "\r" + String(offenceDetails["ViolationOfLaw"])
+			formFieldValues[++iIndex] = "\r \r" + String(offenceDetails["ViolationOfLaw"])
 			formFieldValues[++iIndex] = "\r \rIts punishable under sections"
 			formFieldValues[++iIndex] = "\r" + String(offenceDetails["PenaltySection"])
 			formFieldValues[++iIndex] = "\r \rFor a period of"
@@ -410,7 +409,7 @@ function initializeTemplateValues(cTemplateName,cOffenceType,cNatureOfOffence) {
 			formFieldValues[++iIndex] = "\r \r4. Nature of offence, and under what rule and section liable. If the offence is theft of forest produce, state whole quantity and value involved. If the offence is illegal grazing, state the number and description of the animals."
 			formFieldValues[++iIndex] = "\r Nature of Offence : " + String(offenceDetails["NatureOfOffence"])
 			formFieldValues[++iIndex] = "\r This offence is liable under"
-			formFieldValues[++iIndex] = "\r" + String(offenceDetails["ViolationOfLaw"])
+			formFieldValues[++iIndex] = "\r \r" + String(offenceDetails["ViolationOfLaw"])
 			formFieldValues[++iIndex] = "\r \rIts punishable under sections"
 			formFieldValues[++iIndex] = "\r" + String(offenceDetails["PenaltySection"])
 			formFieldValues[++iIndex] = "\r \rFor a period of"
@@ -461,7 +460,6 @@ function initializeTemplateValues(cTemplateName,cOffenceType,cNatureOfOffence) {
 			formFieldValues[++iIndex] = "\r    5. | " + getVehicleSeizure(1)
 			formFieldValues[++iIndex] = "\r    6. | " + getOtherSeizure(0)
 			formFieldValues[++iIndex] = "\r    7. | " + getOtherSeizure(1)
-			formFieldValues[++iIndex] = "\r \rAbove produce are seized by the forest officials under Sec. Sec. 50 of WL(P) Act 1972 on "+  util.printd("mm/dd/yyyy", new Date()) + " at ______ am/pm in H form number ________ dated ___________."
 			formFieldValues[++iIndex] = "\r \rThis list prepared by me                                             Prepared before me"
 			formFieldValues[++iIndex] = "\r \r Sd.____________________________	               Sd.____________________________"
 			formFieldValues[++iIndex] = "\r " + String(offenceDetails["ForestOfficerName"]) +"                                   FRO," + String(offenceDetails["Range"])
@@ -506,7 +504,7 @@ function initializeTemplateValues(cTemplateName,cOffenceType,cNatureOfOffence) {
 				formFieldValues[++iIndex] = "\r " + util.printd("mm/dd/yyyy", new Date())
 				formFieldValues[++iIndex] = "\r \r" + String(offenceDetails["ForestOfficerName"]) + " of " + String(offenceDetails["Range"]) + " and their subordinates inspected the " + getPlaceOfDetection(false) + ". The resturant/house/hotel/vehicle owner/'authorized person' and two independent witnesses were present during this full course of inspection."
 				formFieldValues[++iIndex] = "\r \rThe forest official identified illegal possession of " + String(offenceDetails["ForestProduce"]) + ". Forest official seized these illegal possession of wildlife under Sec. 50 of WL(P) Act 1972 and prepared the list of seizure. Handed over the duplicate copy of 'list of seized properties' to resturant/house owner and received the acknowledgement in the original list of	properties statement."
-				formFieldValues[++iIndex] = "\r \rThe forest officials have taken the seized materials to produce before the authorized officer (DFO/DCF) as per 39(2)(3) of WL(P) Act 1972."
+				formFieldValues[++iIndex] = "\r \rThe forest officials have taken the seized materials to produce before the authorized officer (DFO/DCF) as per Sec. 39(2)(3) of WL(P) Act 1972."
 				formFieldValues[++iIndex] = "\r \rExcept these seized materials, no other materials have not been taken or seized by the forest officials from the resturant/hotel/house/vehicle. During this inspection, the resturant/vehicle/house owner and staff/other members have not harassed and no damage or loss to the premises."
 				formFieldValues[++iIndex] = "\r \rThis spot magazar is recorded before me, it was read to me, I heard it clearly/ (Or I read it) and it is true."
 				formFieldValues[++iIndex] = "\r \r Sd._______________________________________"
@@ -568,11 +566,11 @@ function initializeTemplateValues(cTemplateName,cOffenceType,cNatureOfOffence) {
 			}
 		} else if (cTemplateName == "ShowCauseNotice") {
 			iIndex=0
-			formFieldValues[iIndex] = "NOTICE ISSUED BY DFO/ACF UNDER SECTION 50(1)(a), 50(5), 50(8)(b)(c) of WL(P) ACT 1972\r"
+			formFieldValues[iIndex] = "NOTICE ISSUED BY DFO/ACF UNDER SEC. 50(1)(a), 50(5), 50(8)(b)(c) of WL(P) ACT 1972\r"
 			formFieldValues[++iIndex] = " OR \r"
-			formFieldValues[++iIndex] = " NOTICE ISSUED BY FORESTER/RANGER UNDER SECTION 50(1)(a), 50(5) of WL(P) ACT 1972\r"
+			formFieldValues[++iIndex] = " NOTICE ISSUED BY FORESTER/RANGER UNDER SEC. 50(1)(a), 50(5) of WL(P) ACT 1972\r"
 			formFieldValues[++iIndex] = "\r \rFOR / WLOR " + String(offenceDetails["OffenceReportNo"]) + "                                                                    Authorized Officers and"
-			formFieldValues[++iIndex] = " \r                                                                                   District Forest Officer//Wildlife warden//Forester"
+			formFieldValues[++iIndex] = " \r                                                                                   District Forest Officer/Wildlife warden/Forester"
 			formFieldValues[++iIndex] = " \r                                                                                   __________________________"
 			formFieldValues[++iIndex] = " \r                                                                                   __________________________"
 			formFieldValues[++iIndex] = " \r                                                                             ____________________division"
@@ -605,14 +603,14 @@ function initializeTemplateValues(cTemplateName,cOffenceType,cNatureOfOffence) {
 			formFieldValues[++iIndex] = "\rSubject:"
 			formFieldValues[++iIndex] = " Request for remanding the accused related to wildlife offence under Sec 50 of WL(P) Act 1972, Sec 200 of Cr.P.C � regarding"
 			formFieldValues[++iIndex] = "\r \r" + String(offenceDetails["Range"]) + " range forest officials caught the below list of accused during their inspection/raid. The accused committed wildlife offence "+ String(offenceDetails["NatureOfOffence"]) + " , transported in " + getVehicleDetails() + " which is violation of wildlife and forest law. The forest official got the offender details and seized the produce with vehicle under section 50 of WL(P) Act 1972 and brought to " + String(offenceDetails["Range"]) + " range office. Offence has been booked under"
-			formFieldValues[++iIndex] = "\r" + String(offenceDetails["ViolationOfLaw"])
+			formFieldValues[++iIndex] = "\r \r" + String(offenceDetails["ViolationOfLaw"])
 			formFieldValues[++iIndex] = "\r \rIts punishable under sections"
 			formFieldValues[++iIndex] = "\r" + String(offenceDetails["PenaltySection"])
 			formFieldValues[++iIndex] = "\r \rFor a period of"
 			formFieldValues[++iIndex] = "\r" + String(offenceDetails["PunishmentPeriod"])
 			formFieldValues[++iIndex] = "\r \rForest officials prepared the list of seizure, got the offenders signature with two independent local witnesses from ________ Village and recorded the accused confession statement. These documents will be produced along with filing �A Form� (Charge sheet)."
-			formFieldValues[++iIndex] = "\r \rThe seized materials have been produced before the authorized officer (DFO/DCF) as per 39(2)(3) of WL(P) Act 1972. AO has issued showcase notice under Sec. 50(1)(a), 50(5), 50(8)(b)(c) and  and confiscation procedure has been initiated as per Sec. 39(3) of WL(P) Act 1972."
-			formFieldValues[++iIndex] = "\r \rAs per Sec 50 of WL(P) Act 1972, I have arrested the accused at ___ PM on " + util.printd("mm/dd/yyyy", new Date()) +" and produced before honorable magistrate along with required documents for judicial custody. I request the following accused to be remanded for 15 days in judicial custody under Sec 50 of WL(P) Act 1972 and Sec 200 of Cr.PC (Private Complaint Procedure). Details of the accused follows"
+			formFieldValues[++iIndex] = "\r \rThe seized materials have been produced before the authorized officer (DFO/DCF) as per 39(2)(3) of WL(P) Act 1972. AO has issued showcase notice under Sec. 50(1)(a), 50(5), 50(8)(b)(c) and confiscation procedure has been initiated as per Sec. 39(3) of WL(P) Act 1972."
+			formFieldValues[++iIndex] = "\r \rAs per Sec 50(1-A) of WL(P) Act 1972, I have arrested the accused at ___ PM on " + util.printd("mm/dd/yyyy", new Date()) +" and produced before honorable magistrate along with required documents for judicial custody. I request the following accused to be remanded for 15 days in judicial custody under Sec 50 of WL(P) Act 1972 and Sec 200 of Cr.PC (Private Complaint Procedure). Details of the accused follows"
 			formFieldValues[++iIndex] = "\r 1." + getOffenderDetails(0,false)
 			formFieldValues[++iIndex] = "\r 2." + getOffenderDetails(1,false)
 			formFieldValues[++iIndex] = "\r \rThe charge sheet (A Form) may be submitted by IO (Forest Range Officer) in due course of time."
@@ -634,7 +632,7 @@ function initializeTemplateValues(cTemplateName,cOffenceType,cNatureOfOffence) {
 			formFieldValues[++iIndex] = "\r \rRef: " + String(offenceDetails["Range"]) + " range WLOR No:" + String(offenceDetails["OffenceReportNo"]) +" on <offence booking date>"
 			formFieldValues[++iIndex] = "\r \r"+ String(offenceDetails["NatureOfOffence"]) +" wildlife offence booked against the accused as per reference sighted above and accused remanded in judicial custody on <offence booking date>. We came to know that the accused filed the bail petition in this honorable court. It’s a wildlife offence with compulsory punishment available under Sec. 51(1),(1C),(1D) of WL(P) Act 1972."
 			formFieldValues[++iIndex] = "\r \rIt�s a premeditated wildlife offence against public property in "+ String(offenceDetails["OffenceLocation"]) +". We are in preliminary investigation stage to perambulate the offence location, seizing the produce are still in progress and searching other offenders as well. Releasing the accused on bail will affect the investigation process and the accused will tamper the evidence. The accused violated the following laws"
-			formFieldValues[++iIndex] = "\r" + String(offenceDetails["ViolationOfLaw"])
+			formFieldValues[++iIndex] = "\r \r" + String(offenceDetails["ViolationOfLaw"])
 			formFieldValues[++iIndex] = "\r \rIts punishable under sections"
 			formFieldValues[++iIndex] = "\r" + String(offenceDetails["PenaltySection"])
 			formFieldValues[++iIndex] = "\r \rFor a period of"
@@ -670,7 +668,7 @@ function initializeTemplateValues(cTemplateName,cOffenceType,cNatureOfOffence) {
 			formFieldValues[++iIndex] = "\r \r4. Nature of offence, and under what rule and section liable. If the offence is theft of forest produce, state whole quantity and value involved. If the offence is illegal grazing, state the number and description of the animals."
 			formFieldValues[++iIndex] = "\r Nature of Offence : " + String(offenceDetails["NatureOfOffence"])
 			formFieldValues[++iIndex] = "\r This offence is liable under"
-			formFieldValues[++iIndex] = "\r" + String(offenceDetails["ViolationOfLaw"])
+			formFieldValues[++iIndex] = "\r \r" + String(offenceDetails["ViolationOfLaw"])
 			formFieldValues[++iIndex] = "\r \rIts punishable under sections"
 			formFieldValues[++iIndex] = "\r" + String(offenceDetails["PenaltySection"])
 			formFieldValues[++iIndex] = "\r \rFor a period of"
