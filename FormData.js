@@ -36,7 +36,7 @@ var dropdownFillData = {
 		],
 		Reports:[
 			["Select","Select"],
-			["Seizure List","SeizureList"],
+			["Seizure List in H Form","SeizureList"],
 			["Measurement List","MeasurementList"],
 			["Confession Statement","ConfessionStatement"],
 			["Spot Magazar","SpotMagazar"],
@@ -74,7 +74,7 @@ var dropdownFillData = {
 		],
 		Reports:[
 			["Select","Select"],
-			["Seizure List","SeizureList"],
+			["Seizure List in H Form","SeizureList"],
 			["Measurement List","MeasurementList"],
 			["Confession Statement","ConfessionStatement"],
 			["Spot Magazar","SpotMagazar"],
@@ -113,7 +113,7 @@ var dropdownFillData = {
 			["Entry with weapon","EntryWithWeapon"],
 			["Injurious Substances","InjuriousSubstances"],
 			["Trespass and Halting","TrespassAndHalting"],
-			["Immurnation of Life Stock","ImmurnationOfLifeStock"],
+			["Immunization of Life Stock","ImmunizationOfLifeStock"],
 			["Non Registration of Arms","NonRegistrationOfArms"]
 		],
 		Seizure:
@@ -131,7 +131,7 @@ var dropdownFillData = {
 		],
 		Reports:[
 			["Select","Select"],
-			["Seizure List","SeizureList"],
+			["Seizure List in H Form","SeizureList"],
 			["Confession Statement","ConfessionStatement"],
 			["Spot Magazar","SpotMagazar"],
 			["Show Cause Notice","ShowCauseNotice"],
