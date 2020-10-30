@@ -99,7 +99,7 @@ var dropdownFillData = {
 		ForestProduce: [""],
 		NatureOfOffence:
 		[
-			["Any offence related to Scheduled Animal","ScheduledAnimal"],
+			["Scheduled Animal Related any offence","ScheduledAnimal"],
 			["Hunting / Attempt to Hunt","Hunting"],
 			["Alteration of Boundary","AlterationOfBoundary"],
 			["Transporting","Transporting"],
