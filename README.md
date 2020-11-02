@@ -11,7 +11,7 @@ This PDF interactive form is designed to work in personal computers. It will not
 Read the tooltip for each field for more usage information.
 
 ## Requirements and usage instructions
-"Enforcement of Forest and Wildlife law 2.0" is a requirement document for this application. Use this interactive form for the following requirement. Use free version of [Acrobat Reader DC](https://get2.adobe.com/uk/reader) or [Foxit Reader](https://www.foxitsoftware.com/pdf-reader) to fill this form. Saving this interactive form file in custom location or load the form data file will work only in Foxit Reader.
+"Enforcement of Forest and Wildlife law 2.0" is a requirement document for this application. Use this interactive form for the following requirement. Use free version of [Acrobat Reader DC](https://get2.adobe.com/uk/reader) or [Foxit Reader](https://www.foxitsoftware.com/pdf-reader) to fill this form. Saving this interactive form file in predefined location or load the form data file will work only in Foxit Reader.
 
 ### 1. To know Forest, WL and BD law sections for an offence
 * Fill Blue color and italic font form fields and then click "Load Law Violations" button. Select all possible offences in "Nature of Offence" list box by holding CTRL key.
@@ -55,11 +55,11 @@ Seizure List in Form H, Measurement List, Confession Statement, Spot Magazar (Po
 ## Why PDF interactive form was selected to meet this requirement
 "Interactive PDF form" solution has been chosen to implement these requirements to ensure the security of its user's activity in personal computer, to work without internet connectivity and use mostly available software in personal computer to avoid additional installation. From the security perspective, PDF readers don't allow to save file/data in local storage, and don't allow to track or monitor the users mobile/desktop activities in foreground or background. Mobile application or Web application will be a backbox for it's users and potential to track users' other activities and their movements. To maintain safety and security, this PDF form application won't allow to save file/data locally other than one predefined file said in this document. Even this functionality is prohibited in Adobe PDF reader/Writer. Few PDF readers, allow to save the file in predefined location with predefined file name. PDF interactive form has been chosen based on these criteria.  
 
-## For contributors: Who are interested to add more capabilities or customize to the application to meet their requirement
+## For contributors: Who are interested to add more capabilities or customize the application to meet their requirement
 Forest-WL-Law application is built with PDF javascript APIs. Package layout section contains the instructions for this OSS code. Those who want an application for other state need to customize the `forestOffence.js` file with their appropriate law. Use `Adobe PDF writer` or `Foxit PhantomPDF` to add the given `javascript` files for customization or enhancement.
 
 ### Area for contribution
-Each south state has their own forest law derived from Madras Forest Act 1882 and Most of the other Indian states follow Indian forest Act 1927. Create a state specific `ForestOffence.js` file with your state specific law knowledge to customize this application for your state. Please raise a git issue if there is a prosecution procedure difference in your state.  
+Each south state has their own forest law derived from Madras Forest Act and Most of the other Indian states follow Indian forest Act 1927. Create a state specific `ForestOffence.js` file with your state specific law knowledge to customize this application for your state. Please raise a git issue if there is a prosecution procedure difference in your state.  
 
 ### Package Layout
 ```
