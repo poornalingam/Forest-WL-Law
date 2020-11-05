@@ -8,7 +8,7 @@ var dropdownFillData = {
 			["Unreserved Land","URL"],
 			["Patta HP Act","PattaHP"],
 			["Patta PP Act","PattaPP"],
-			["Patta Other Categories","PattaOther"],
+			["Other Patta Categories","PattaOther"],
 			["Transferred Territory Area","PattaTT"],
 			["Tiger Reserve Core Area","TRCore"],
 			["Tiger Reserve Other than Core Area","TRBuffer"],
@@ -319,7 +319,6 @@ var dropdownFillData = {
 }
 
 function LoadNatureOfOffenceDropDown(key1,key2){
-	//console.println("Load Nature of offence:Key1"+key1+": Key2:"+key2)
 	//Populate combo and list box fields with values from the Forest location type Data Object
 	var NatureOfOffence = []
 	if (key1 !="" && key1 !="Select") {
@@ -334,7 +333,6 @@ function LoadNatureOfOffenceDropDown(key1,key2){
 		}
 	}
 
-	//console.println("Load Nature of offence:Length:"+NatureOfOffence.length)
 	if (NatureOfOffence.length > 0)
 		this.getField("lbNatureOfOffence").setItems(NatureOfOffence)
 	else

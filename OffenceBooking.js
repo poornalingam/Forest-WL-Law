@@ -72,8 +72,6 @@ function SetWLOffencePenalty(cNatureOfOffence,cOffenceLocation,cCompany,cNationa
 	penalty = wlOffencePenalty["COMMON"].Penalty
 	imprisonment = wlOffencePenalty["COMMON"].ImprisonmentAndFine
 
-	//console.println("NatureOfOffence:"+ NatureOfOffence+":cOffenceLocation:"+ cOffenceLocation)
-
 	var penaltyObject = wlOffencePenalty[NatureOfOffence]
 	if (penaltyObject != undefined) {
 		penalty = penaltyObject.Penalty
@@ -114,6 +112,7 @@ function SetWLOffencePenalty(cNatureOfOffence,cOffenceLocation,cCompany,cNationa
 	setWLOffenceNonCompoundable(cNatureOfOffence,cOffenceLocation)
 }
 
+
 function setWLOffenceNonCompoundable(cNatureOfOffence,cOffenceLocation){
 	// wlOffencePenalty["NonCompoundable"][0] contains the list of non-compoundable strings with comma delimiter
 	var nonCompoundable = String(wlOffencePenalty["NonCompoundable"][0])
@@ -124,21 +123,23 @@ function setWLOffenceNonCompoundable(cNatureOfOffence,cOffenceLocation){
 	var cCompoundable = ""
 	var field = this.getField("pbCompoundable")
 
-	//console.println("nonCompoundable:"+nonCompoundable+":displayString:"+ displayString)
+	for (i=0;i<cNatureOfOffence.length;i++){
+			if ((nonCompoundable.indexOf(","+cNatureOfOffence[i]+",")!= -1) || (nonCompoundable.indexOf(","+cOffenceLocation+",")!= -1) ||
+				(nonCompoundable.indexOf(String(cNatureOfOffence[i]+cOffenceLocation))!= -1)){
+				if (cOffenceLocation.indexOf("TRCore") != -1)
+				      displayString = "Any Offence in Tiger Reserve Core Area is non compoundable offence as per Sec. 51(1C)(1D) of WL(P) Act 1972"
+				else if (displayString.indexOf("1972")== -1)
+				      displayString = displayString + " is non compoundable offence as per Sec. 51(1), 54(4) of WL(P) Act"
 
-	if ((nonCompoundable.indexOf(","+cNatureOfOffence+",")!= -1) || (nonCompoundable.indexOf(","+cOffenceLocation+",")!= -1) ||
-		(nonCompoundable.indexOf(String(cNatureOfOffence+cOffenceLocation))!= -1)){
-		if (cOffenceLocation.indexOf("TRCore") != -1)
-		      displayString = "Any Offence in Tiger Reserve Core Area is non compoundable offence as per Sec. 51(1C)(1D) of WL(P) Act 1972"
-		else if (displayString.indexOf("1972")== -1)
-		      displayString = displayString + " is non compoundable offence as per Sec. 51(1), 54(4) of WL(P) Act 1972"
-
-		cCompoundable ="Non-Compoundable, How?"
-		field.toolTip = displayString
-	} else {
-		cCompoundable ="Compoundable, How?"
-		displayString = displayString + ", offence can be compoundable as per Sec. 51(1),54 of WL(P) Act"
+				cCompoundable ="Non-Compoundable, How?"
+				field.toolTip = displayString
+				break
+			} else {
+				cCompoundable ="Compoundable, How?"
+				displayString = displayString + ", offence can be compoundable as per Sec. 51(1),54 of WL(P) Act 1972"
+			}
 	}
+
 	field.buttonSetCaption(cCompoundable)
 	field.userName = displayString
 }
@@ -151,8 +152,6 @@ function SetOffenceSections(cNatureOfOffences,cOffenceLocation,cOffenceForestPro
 function getOffenceSections(cNatureOfOffences,cOffenceForestProduce,cOffenceLocation,cCompany) {
 
 	var cOffenceCategory = cOffenceForestProduce + cOffenceLocation
-	//console.println("CNatureOfOffences:"+cNatureOfOffences + ":cOffenceCategory:"+ cOffenceCategory)
-
 	//TR other than Core area, NP and Sanctuary offence sections are same as RF. This is to avoid larger number definition.
 	//Also add "DisturbWLLifecycle" to include WL related sections
 	if (cOffenceLocation=="TRBuffer"|| cOffenceLocation =="NP"||cOffenceLocation=="Sanctuary"){
@@ -233,8 +232,6 @@ function getOffencePenalty(cNatureOfOffences,cOffenceLocation,cOffenceForestProd
 	var returnObject = []
 	var penaltyObject = []
 	var cOffenceCategory = cOffenceForestProduce + cOffenceLocation
-	//console.println("CNatureOfOffences:"+cNatureOfOffences + ":cOffenceCategory:"+ cOffenceCategory)
-
 	//TR other than Core area, NP and Sanctuary offence sections are same as RF. This is to avoid larger number definition.
 	if (cOffenceLocation=="TRBuffer"|| cOffenceLocation =="NP"||cOffenceLocation=="Sanctuary"){
 		cOffenceCategory =cOffenceForestProduce + "RF"
@@ -242,7 +239,6 @@ function getOffencePenalty(cNatureOfOffences,cOffenceLocation,cOffenceForestProd
 
 	// Collect all the penalty sections.
 	for (i=0;i<cNatureOfOffences.length;i++) {
-		//console.println("cNatureOfOffences:"+cNatureOfOffences[i])
 		if (cNatureOfOffences[i] == "DisturbWLLifecycle"){
 			if (forestOffenceSections[cOffenceLocation]==undefined){
 				penaltyObject = penaltyObject.concat(forestOffenceSections["Common"]["PenaltyObjectName"]["Common"])
@@ -259,24 +255,24 @@ function getOffencePenalty(cNatureOfOffences,cOffenceLocation,cOffenceForestProd
 
 	var eachLaw = [], penalty = [], imprisonment = [], sections ="",previousActName="", actName=""
 	for (i=0; i<penaltyObject.length; i++) {
-		eachLaw = forestOffencePenalty[penaltyObject[i]]["Penalty"]
-		actName = eachLaw[0]
+			eachLaw = forestOffencePenalty[penaltyObject[i]]["Penalty"]
+			actName = eachLaw[0]
 
-		if ( i==0 || previousActName == actName){
-			sections = sections + "," +eachLaw[1]
-			imprisonment.push((forestOffencePenalty[penaltyObject[i]]["ImprisonmentAndFine"]).toString())
-		} else {
-			penalty.push(previousActName +removeDuplicates(sections))
-			imprisonment.push((forestOffencePenalty[penaltyObject[i]]["ImprisonmentAndFine"]).toString())
-			sections = eachLaw[1]
-		}
+			if ( i==0 || previousActName == actName){
+				sections = sections + "," +eachLaw[1]
+				imprisonment.push((forestOffencePenalty[penaltyObject[i]]["ImprisonmentAndFine"]).toString())
+			} else {
+				penalty.push(previousActName +removeDuplicates(sections))
+				imprisonment.push((forestOffencePenalty[penaltyObject[i]]["ImprisonmentAndFine"]).toString())
+				sections = eachLaw[1]
+			}
 
-		// Save the remaining (ie Last array element in array. Ignore the general instruction entry which is already takencare.
-		if (i==(penaltyObject.length-1) && eachLaw[1] != undefined){
-			penalty.push(actName+removeDuplicates(sections))
-			imprisonment.push((forestOffencePenalty[penaltyObject[i]]["ImprisonmentAndFine"]).toString())
-		}
-		previousActName = actName
+			// Save the remaining (ie Last array element in array. Ignore the general instruction entry which is already takencare.
+			if (i==(penaltyObject.length-1) && eachLaw[1] != undefined){
+				penalty.push(actName+removeDuplicates(sections))
+				imprisonment.push((forestOffencePenalty[penaltyObject[i]]["ImprisonmentAndFine"]).toString())
+			}
+			previousActName = actName
 	}
 
 	//Set the sequence number
@@ -335,16 +331,17 @@ function setLogVolumeAndCompoundingMessage(cSeizureFP,cOffenceType){
 
 	if(cOffenceType =="ST" || cOffenceType =="NonST") {
 	       if (cSeizureFP !="Sandal"){
-		  this.getField("txtSeizerQuantity.0").value = QuaterGirth(this.getField("txtLogMidGirth.0").value, this.getField("txtLogLength.0").value)
-		  this.getField("txtSeizerQuantity.1").value = QuaterGirth(this.getField("txtLogMidGirth.1").value, this.getField("txtLogLength.1").value)
-		  this.getField("txtSeizerQuantity.2").value = QuaterGirth(this.getField("txtLogMidGirth.2").value, this.getField("txtLogLength.2").value)
-		  this.getField("cbQuantity.0").value= "Cub.M"
-		  this.getField("cbQuantity.1").value= "Cub.M"
-		  this.getField("cbQuantity.2").value= "Cub.M"
+					  this.getField("txtSeizerQuantity.0").value = QuaterGirth(this.getField("txtLogMidGirth.0").value, this.getField("txtLogLength.0").value)
+					  this.getField("txtSeizerQuantity.1").value = QuaterGirth(this.getField("txtLogMidGirth.1").value, this.getField("txtLogLength.1").value)
+					  this.getField("txtSeizerQuantity.2").value = QuaterGirth(this.getField("txtLogMidGirth.2").value, this.getField("txtLogLength.2").value)
+					  this.getField("cbQuantity.0").value= "Cub.M"
+					  this.getField("cbQuantity.1").value= "Cub.M"
+					  this.getField("cbQuantity.2").value= "Cub.M"
 	      }
 	      this.getField("txtTotalSeizureValue").value= (this.getField("txtValue.0").value +  this.getField("txtValue.1").value +  this.getField("txtValue.2").value)
 	      var quantity = ((this.getField("txtSeizerQuantity.0").value +  this.getField("txtSeizerQuantity.1").value +  this.getField("txtSeizerQuantity.2").value))
-	      quantity = isNaN(quantity)?"":quantity.toFixed(3)
+				if (typeof quantity == "number")
+	      		quantity = quantity.toFixed(3)
 	      this.getField("txtTotalSeizureQuantity").value= quantity
 	}
 
