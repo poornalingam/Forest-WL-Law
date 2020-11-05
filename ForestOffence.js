@@ -1,32 +1,32 @@
-// Ensure end of the line of each law end with comma for join function to work proper. Its mandatory for split and sorting. 
+// Ensure end of the line of each law end with comma for join function to work proper. Its mandatory for split and sorting.
 //
 var forestOffenceSections = {
-        Common: {
-		"DisturbWLLifecycle":[ 
+  Common: {
+		"DisturbWLLifecycle":[
 			"8)WL(P) Act 1972 Sec.$2(12B)(15)(17)(24A)(25B)(37),29,50,51(1),52,54,55,56,"
 		],
 		"PenaltyObjectName":{"Common":["WLCOMMON"]}
 	},
 	TRCore :{
-		"DisturbWLLifecycle":[ 
+		"DisturbWLLifecycle":[
 			"8)WL(P) Act 1972 Sec.$2(12B)(15)(17)(24A)(25B)(37),27(2)(3)(4),29,31,32,35(6),38-O,38V(1)(2)(3)(4(i)),38V,50,51(1),51(1C)(1D),52,54,55,56,57,Note:\n A)Add 51(1D) for abets.\n B)For section 51(1C) Refer WL(P) Amendment Act 2006,"
 		],
 		"PenaltyObjectName": {"TRCore":["TRCore"]}
 	},
 	TRBuffer :{
-		"DisturbWLLifecycle":[ 
+		"DisturbWLLifecycle":[
 			"8)WL(P) Act 1972 Sec.$2(12B)(15)(17)(24A)(25B)(37),27(2)(3)(4),29,31,32,35(6),38-O,38V(4)(ii),38V,50,51(1),52,54,55,56,57,"
 		],
 		"PenaltyObjectName":{"TRBuffer":["WLCOMMON"]}
 	},
 	NP : {
-		"DisturbWLLifecycle":[ 
+		"DisturbWLLifecycle":[
 			"8)WL(P) Act 1972 Sec.$2(12B)(15)(17)(21)(24A)(25B)(37),27(2)(3)(4),29,31,32,35,35(6),50,51(1),52,54,55,56,57,"
 		],
 		"PenaltyObjectName":{"NP":["WLCOMMON"]}
 	},
 	Sanctuary:{
-		"DisturbWLLifecycle":[ 
+		"DisturbWLLifecycle":[
 			"8)WL(P) Act 1972 Sec.$2(12B)(15)(24A)(25B)(26),26A,27,29,31,32,50,51(1),52,54,55,56,57,"
 		],
 		"PenaltyObjectName":{"Sanctuary":["WLCOMMON"]}
@@ -52,9 +52,9 @@ var forestOffenceSections = {
 			"VehicleTransport":["TNF1882Sec21(1)","TNF1882Sec21(i)","TNF1882Sec35B","TNTMCO1982"],
 			"PossessionGreaterThanHalfCM":["TNF1882Sec21(1)","TNF1882Sec21(i)","TNF1882Sec35B","TNTMCO1982","TNRWBI2010"]
 		}
-        },
-        TeakRL: {
-		"AttemptToTransport": [ 
+  },
+  TeakRL: {
+		"AttemptToTransport": [
 			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),41,51,49A,49B,49G,56,",
 			"5)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),"
 		],
@@ -79,9 +79,9 @@ var forestOffenceSections = {
 			"VehicleTransport":["TNF1882Sec28A","TNF1882Sec35B","TNTMCO1982","GenRules"],
 			"PossessionGreaterThanHalfCM":["TNF1882Sec28A","TNF1882Sec35B","TNTMCO1982","GenRules","TNRWBI2010"]
 		}
-        },
-        TeakURL: {
-		"AttemptToTransport": [ 
+  },
+  TeakURL: {
+		"AttemptToTransport": [
 			"0)TN.F.Act 1882 Sec.$26,41,51,49A,49B,49G,56,",
 			"5)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),10,"
 		],
@@ -106,16 +106,16 @@ var forestOffenceSections = {
 			"VehicleTransport":["TNF1882Sec35B","TNTMCO1982","GenRules"],
 			"PossessionGreaterThanHalfCM":["TNF1882Sec35B","TNTMCO1982","GenRules","TNRWBI2010"]
 		}
-        },
-        TeakPattaOther: {
-		"AttemptToTransport": ["Not Applicable,"], 
+  },
+  TeakPattaOther: {
+		"AttemptToTransport": ["Not Applicable,"],
 		"VehicleTransport":[
 			"0)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,",
 			"1)T.T.Rules 1968 Sec.$2,3(ii),",
 			"2)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
 			"3)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,3,3A,4,"
 		],
-	        "PossessionGreaterThanHalfCM":[
+	  "PossessionGreaterThanHalfCM":[
 			"0)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
 			"1)T.T.Rules 1968 Sec.$2,3(ii),7,",
 			"2)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
@@ -125,11 +125,12 @@ var forestOffenceSections = {
 		"PossessionLessThanFiveKG":["Use Cutting, Vehicle Transport offence Section"],
 		"PossessionGreaterThanFiveKG":["Use Cutting, Vehicle Transport offence Section"],
 		"PenaltyObjectName":{
+      "AttemptToTransport":["NA"],
 			"VehicleTransport":["TNF1882Sec35B","TNTMCO1982"],
 			"PossessionGreaterThanHalfCM":["TNF1882Sec35B","TNTMCO1982","TNRWBI2010"]
 		}
-        },
-        TeakPattaPP: {
+  },
+  TeakPattaPP: {
 		"AttemptToTransport": ["Not Applicable,"],
 		"VehicleTransport":[
 			"0)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,",
@@ -151,11 +152,12 @@ var forestOffenceSections = {
 		"PossessionLessThanFiveKG":["Use Cutting, Vehicle Transport offence Section"],
 		"PossessionGreaterThanFiveKG":["Use Cutting, Vehicle Transport offence Section"],
 		"PenaltyObjectName":{
+      "AttemptToTransport":["NA"],
 			"VehicleTransport":["TNF1882Sec35B","TNTMCO1982","TNPPF1949"],
 			"PossessionGreaterThanHalfCM":["TNF1882Sec35B","TNTMCO1982","TNPPF1949","TNRWBI2010"]
 		}
         },
-        TeakPattaHP: {
+  TeakPattaHP: {
 		"AttemptToTransport": ["Not Applicable,"],
 		"VehicleTransport":[
 			"0)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,",
@@ -175,11 +177,12 @@ var forestOffenceSections = {
 		"PossessionLessThanFiveKG":["Use Cutting, Vehicle Transport offence Section"],
 		"PossessionGreaterThanFiveKG":["Use Cutting, Vehicle Transport offence Section"],
 		"PenaltyObjectName":{
+      "AttemptToTransport":["NA"],
 			"VehicleTransport":["TNF1882Sec35B","TNTMCO1982","TNHP1955"],
 			"PossessionGreaterThanHalfCM":["TNF1882Sec35B","TNTMCO1982","TNHP1955","TNRWBI2010"]
 		}
         },
-        TeakPattaTT: {
+  TeakPattaTT: {
 		"AttemptToTransport": ["Not Applicable,"],
 		"VehicleTransport": ["Not Applicable,"],
 		"RoyaltiesPossession":[
@@ -199,6 +202,8 @@ var forestOffenceSections = {
 		"PossessionLessThanFiveKG":["Use Cutting, Vehicle Transport & Possession"],
 		"PossessionGreaterThanFiveKG":["Use Cutting, Vehicle Transport & Possession"],
 		"PenaltyObjectName":{
+      "AttemptToTransport":["NA"],
+      "VehicleTransport":["NA"],
 			"RoyaltiesPossession":["TNF1882Sec35B","TNTMCO1982","TNRWBI2010"],
 			"PossessionGreaterThanHalfCM":["TNF1882Sec35B","TNTMCO1982","TNRWBI2010"]
 		}
@@ -247,34 +252,34 @@ var forestOffenceSections = {
 			"Possession":["TNF1882Sec21(1)","TNF1882Sec21(i)","TNF1882Sec35B","TNTMCO1982","TNRW1994","TNRWBI2010"]
 		}
         },
-        RoseWoodRL: {
-		"AttemptToTransport": [ 
-			"0)TN.F.Act 1882 Sec.$26(c)(d)(g)41,51,49A,49B,49G,56,",
-			"1)TN.R.W Trees (c) Act 1994 Sec.$2,3,4,6,",
-			"5)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),"
-		],
-		"VehicleTransport":[
-			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)TN.R.W Trees (c) Act 1994 Sec.$2,3,4,6,8,10,",
-			"2)T.T.Rules 1968 Sec.$2,3(i),",
-			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"5)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),"
-		],
-		"Possession":[
-			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)TN.R.W Trees (c) Act 1994 Sec.$2,3,4,6,8,10,",
-			"2)T.T.Rules 1968 Sec.$2,3(i),7,",
-			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"4)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,",
-			"5)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),"
-		],
-		"PenaltyObjectName":{
-			"AttemptToTransport":["TNF1882Sec28A","GenRules","TNRW1994"],
-			"VehicleTransport":["TNF1882Sec28A","TNF1882Sec35B","TNTMCO1982","GenRules","TNRW1994"],
-			"Possession":["TNF1882Sec28A","TNF1882Sec35B","TNTMCO1982","GenRules","TNRWBI2010","TNRW1994"]
-		}
-        },
-        RoseWoodURL: {
+  RoseWoodRL: {
+  	"AttemptToTransport": [
+  			"0)TN.F.Act 1882 Sec.$26(c)(d)(g)41,51,49A,49B,49G,56,",
+  			"1)TN.R.W Trees (c) Act 1994 Sec.$2,3,4,6,",
+  			"5)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),"
+  		],
+  	"VehicleTransport":[
+  			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
+  			"1)TN.R.W Trees (c) Act 1994 Sec.$2,3,4,6,8,10,",
+  			"2)T.T.Rules 1968 Sec.$2,3(i),",
+  			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+  			"5)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),"
+  		],
+  	"Possession":[
+  			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
+  			"1)TN.R.W Trees (c) Act 1994 Sec.$2,3,4,6,8,10,",
+  			"2)T.T.Rules 1968 Sec.$2,3(i),7,",
+  			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+  			"4)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,",
+  			"5)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),"
+  		],
+  	"PenaltyObjectName":{
+  			"AttemptToTransport":["TNF1882Sec28A","GenRules","TNRW1994"],
+  			"VehicleTransport":["TNF1882Sec28A","TNF1882Sec35B","TNTMCO1982","GenRules","TNRW1994"],
+  			"Possession":["TNF1882Sec28A","TNF1882Sec35B","TNTMCO1982","GenRules","TNRWBI2010","TNRW1994"]
+  		}
+    },
+  RoseWoodURL: {
 		"AttemptToTransport": [
 			"0)TN.F.Act 1882 Sec.26,41,51,49A,49B,49G,56,",
 			"1)TN.R.W Trees (c) Act 1994 Sec.$2,3,4,6,",
@@ -293,7 +298,7 @@ var forestOffenceSections = {
 			"2)T.T.Rules 1968 Sec.$2,3(i),7,",
 			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
 			"4)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,",
-			"5)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),10," 
+			"5)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),10,"
 		],
 		"PenaltyObjectName":{
 			"AttemptToTransport":["TNF1882Sec35B","GenRules","TNRW1994"],
@@ -301,7 +306,23 @@ var forestOffenceSections = {
 			"Possession":["TNF1882Sec35B","TNTMCO1982","GenRules","TNRWBI2010","TNRW1994"]
 		}
         },
-        RoseWoodPattaOther: {
+  RoseWoodPattaOther: {
+		"AttemptToTransport": ["Not Applicable,"],
+		"VehicleTransport": ["Not Applicable,"],
+	  "Possession":[
+			"0)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
+			"1)TN.R.W Trees (c) Act 1994 Sec.$2,3,4,6,8,10,",
+			"2)T.T.Rules 1968 Sec.$2,3(ii),7,",
+			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+			"4)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,\n Note: Unlicensed ind. Needs to be booked under Sec 3 also,"
+  	],
+  	"PenaltyObjectName":{
+  			"AttemptToTransport":["NA"],
+  			"VehicleTransport":["NA"],
+  			"Possession":["TNF1882Sec35B","TNTMCO1982","GenRules","TNRWBI2010","TNRW1994"]
+  	}
+  },
+  RoseWoodPattaPP: {
 		"AttemptToTransport": ["Not Applicable,"],
 		"VehicleTransport": ["Not Applicable,"],
 	        "Possession":[
@@ -312,67 +333,51 @@ var forestOffenceSections = {
 			"4)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,\n Note: Unlicensed ind. Needs to be booked under Sec 3 also,"
 		],
 		"PenaltyObjectName":{
-			"AttemptToTransport":[],
-			"VehicleTransport":[],
+			"AttemptToTransport":["NA"],
+			"VehicleTransport":["NA"],
 			"Possession":["TNF1882Sec35B","TNTMCO1982","GenRules","TNRWBI2010","TNRW1994"]
 		}
-        },
-        RoseWoodPattaPP: {
+  },
+  RoseWoodPattaHP: {
+  		"AttemptToTransport": ["Not Applicable,"],
+  		"VehicleTransport": ["Not Applicable,"],
+  	        "Possession":[
+  			"0)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
+  			"1)TN.R.W Trees (c) Act 1994 Sec.$2,3,4,6,8,10,",
+  			"2)T.T.Rules 1968 Sec.$2,3(ii),7,",
+  			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+  			"4)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,\n Note: Unlicensed ind. Needs to be booked under Sec 3 also,"
+  		],
+  		"PenaltyObjectName":{
+  			"AttemptToTransport":["NA"],
+  			"VehicleTransport":["NA"],
+  			"Possession":["TNF1882Sec35B","TNTMCO1982","GenRules","TNRWBI2010","TNRW1994"]
+  		}
+    },
+    RoseWoodPattaTT: {
 		"AttemptToTransport": ["Not Applicable,"],
 		"VehicleTransport": ["Not Applicable,"],
-	        "Possession":[
-			"0)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)TN.R.W Trees (c) Act 1994 Sec.$2,3,4,6,8,10,",
-			"2)T.T.Rules 1968 Sec.$2,3(ii),7,",
-			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"4)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,\n Note: Unlicensed ind. Needs to be booked under Sec 3 also,"
+	  "RoyaltiesPossession":[
+  			"0)TN.F.Act 1882 Sec.$26(h),35,36,40G,41,51,49A,49B,49G,56,56B,56C,56D,",
+  			"1)TN.R.W Trees (c) Act 1994 Sec.$2,3,4,6,8,10,",
+  			"2)T.T.Rules 1968 Sec.$2,3(ii),4,5,7,",
+  			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+  			"4)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,\n Note: Unlicensed ind. Needs to be booked under Sec 3 also,"
+		],
+	  "Possession":[
+  			"0)TN.F.Act 1882 Sec.$26(h),35,36,40G,41,51,49A,49B,49G,56,56B,56C,56D,",
+  			"1)TN.R.W Trees (c) Act 1994 Sec.$2,3,4,6,8,10,",
+  			"2)T.T.Rules 1968 Sec.$2,3(ii),4,5,7,",
+  			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+  			"4)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,\n Note: Unlicensed ind. Needs to be booked under Sec 3 also,"
 		],
 		"PenaltyObjectName":{
-			"AttemptToTransport":[],
-			"VehicleTransport":[],
-			"Possession":["TNF1882Sec35B","TNTMCO1982","GenRules","TNRWBI2010","TNRW1994"]
+  			"AttemptToTransport":["NA"],
+  			"VehicleTransport":["NA"],
+  			"RoyaltiesPossession":["TNF1882Sec35B","TNTMCO1982","GenRules","TNRWBI2010","TNRW1994"],
+  			"Possession":["TNF1882Sec35B","TNTMCO1982","GenRules","TNRWBI2010","TNRW1994"]
 		}
-        },
-        RoseWoodPattaHP: {
-		"AttemptToTransport": ["Not Applicable,"],
-		"VehicleTransport": ["Not Applicable,"],
-	        "Possession":[
-			"0)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)TN.R.W Trees (c) Act 1994 Sec.$2,3,4,6,8,10,",
-			"2)T.T.Rules 1968 Sec.$2,3(ii),7,",
-			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"4)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,\n Note: Unlicensed ind. Needs to be booked under Sec 3 also,"
-		],
-		"PenaltyObjectName":{
-			"AttemptToTransport":[],
-			"VehicleTransport":[],
-			"Possession":["TNF1882Sec35B","TNTMCO1982","GenRules","TNRWBI2010","TNRW1994"]
-		}
-        },
-        RoseWoodPattaTT: {
-		"AttemptToTransport": ["Not Applicable,"],
-		"VehicleTransport": ["Not Applicable,"],
-	        "RoyaltiesPossession":[
-			"0)TN.F.Act 1882 Sec.$26(h),35,36,40G,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)TN.R.W Trees (c) Act 1994 Sec.$2,3,4,6,8,10,",
-			"2)T.T.Rules 1968 Sec.$2,3(ii),4,5,7,",
-			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"4)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,\n Note: Unlicensed ind. Needs to be booked under Sec 3 also,"
-		],
-	        "Possession":[
-			"0)TN.F.Act 1882 Sec.$26(h),35,36,40G,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)TN.R.W Trees (c) Act 1994 Sec.$2,3,4,6,8,10,",
-			"2)T.T.Rules 1968 Sec.$2,3(ii),4,5,7,",
-			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"4)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,\n Note: Unlicensed ind. Needs to be booked under Sec 3 also,"
-		],
-		"PenaltyObjectName":{
-			"AttemptToTransport":[],
-			"VehicleTransport":[],
-			"RoyaltiesPossession":["TNF1882Sec35B","TNTMCO1982","GenRules","TNRWBI2010","TNRW1994"],
-			"Possession":["TNF1882Sec35B","TNTMCO1982","GenRules","TNRWBI2010","TNRW1994"]
-		}
-        },
+  },
 	RoseWoodTRCore:{
 		"TRCoreAreaOffence": [
 			"0)TN.F.Act 1882 Sec.$21(d)(e)(f),35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
@@ -426,88 +431,117 @@ var forestOffenceSections = {
 			"VehicleTransport":["TNF1882Sec21(1)","TNF1882Sec21(i)","TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982"],
 			"PossessionLessThanFiveKG":["TNF1882Sec21(1)","TNF1882Sec21(i)","TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982"],
 			"PossessionGreaterThanFiveKG":["TNF1882Sec21(1)","TNF1882Sec21(i)","TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982","TNRWBI2010"]
-		}
-        },
-        SandalRL: {
-		"AttemptToTransport": [ 
-			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),36A,36B,36C,41,51,49A,49B,49G,56,",
-			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),"
-		],
-		"VehicleTransport":[
-			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),35,36,36A,36B,36C,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),",
-			"2)T.T.Rules 1968 Sec.$2,3(i),",
-			"3)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,",
-			"4)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,"
-		],
- 		"PossessionLessThanFiveKG":[
-			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),35,36,36A,36B,36C,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),",
-			"2)T.T.Rules 1968 Sec.$2,3(i),",
-			"3)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
-			"4)TN.S.W.Possession Rules 1970 Sec.$2,3,",
-			"5)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"6)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,"
-		],
-		"PossessionGreaterThanFiveKG": [
-			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),35,36,36A,36B,36C,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),",
-			"2)T.T.Rules 1968 Sec.$2,3(i),7,",
-			"3)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
-			"4)TN.S.W.Possession Rules 1970 Sec.$2,3,",
-			"5)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"6)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,Note:\n Add Sec. 3 – if exceed 0.50 c.mtr,",
-			"7)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,"
-		],
-		"PenaltyObjectName":{
-			"AttemptToTransport":["TNF1882Sec28A","TNF1882Sec36E","GenRules"],
-			"VehicleTransport":["TNF1882Sec28A","TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982","GenRules"],
-			"PossessionLessThanFiveKG":["TNF1882Sec28A","TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982","GenRules"],
-			"PossessionGreaterThanFiveKG":["TNF1882Sec28A","TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982","GenRules","TNRWBI2010"]
-		}
-        },
-        SandalURL: {
-		"AttemptToTransport": [
-			"0)TN.F.Act 1882 Sec.$26,36A,36B,36C,41,51,49A,49B,49G,56,",
-			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),10,"
-		],
-		"VehicleTransport":[
-			"0)TN.F.Act 1882 Sec.$26,35,36,36A,36B,36C,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),10,",
-			"2)T.T.Rules 1968 Sec.$2,3(i),",
-			"3)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,",
-			"5)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,"
-		],
- 		"PossessionLessThanFiveKG":[
-			"0)TN.F.Act 1882 Sec.$26,35,36,36A,36B,36C,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),10,",
-			"2)T.T.Rules 1968 Sec.$2,3(i),",
-			"3)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
-			"4)TN.S.W.Possession Rules 1970 Sec.$2,3,",
-			"5)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"6)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,"
-		],
-		"PossessionGreaterThanFiveKG": [
-			"0)TN.F.Act 1882 Sec.$26,35,36,36A,36B,36C,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),10,",
-			"2)T.T.Rules 1968 Sec.$2,3(i),7,",
-			"3)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
-			"4)TN.S.W.Possession Rules 1970 Sec.$2,3,",
-			"5)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"6)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,Note:\n Add Sec. 3 – if exceed 0.50 c.mtr,",
-			"7)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,"
-		],
-		"PenaltyObjectName":{
-			"AttemptToTransport":["TNF1882Sec35B","TNF1882Sec36E","GenRules"],
-			"VehicleTransport":["TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982","GenRules"],
-			"PossessionLessThanFiveKG":["TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982","GenRules"],
-			"PossessionGreaterThanFiveKG":["TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982","GenRules","TNRWBI2010"]
-		}
-        },
-        SandalPattaOther: {
+		  }
+    },
+  SandalRL: {
+  		"AttemptToTransport": [
+  			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),36A,36B,36C,41,51,49A,49B,49G,56,",
+  			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),"
+  		],
+  		"VehicleTransport":[
+  			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),35,36,36A,36B,36C,41,51,49A,49B,49G,56,56B,56C,56D,",
+  			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),",
+  			"2)T.T.Rules 1968 Sec.$2,3(i),",
+  			"3)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,",
+  			"4)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,"
+  		],
+   		"PossessionLessThanFiveKG":[
+  			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),35,36,36A,36B,36C,41,51,49A,49B,49G,56,56B,56C,56D,",
+  			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),",
+  			"2)T.T.Rules 1968 Sec.$2,3(i),",
+  			"3)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
+  			"4)TN.S.W.Possession Rules 1970 Sec.$2,3,",
+  			"5)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+  			"6)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,"
+  		],
+  		"PossessionGreaterThanFiveKG": [
+  			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),35,36,36A,36B,36C,41,51,49A,49B,49G,56,56B,56C,56D,",
+  			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),",
+  			"2)T.T.Rules 1968 Sec.$2,3(i),7,",
+  			"3)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
+  			"4)TN.S.W.Possession Rules 1970 Sec.$2,3,",
+  			"5)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+  			"6)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,Note:\n Add Sec. 3 – if exceed 0.50 c.mtr,",
+  			"7)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,"
+  		],
+  		"PenaltyObjectName":{
+  			"AttemptToTransport":["TNF1882Sec28A","TNF1882Sec36E","GenRules"],
+  			"VehicleTransport":["TNF1882Sec28A","TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982","GenRules"],
+  			"PossessionLessThanFiveKG":["TNF1882Sec28A","TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982","GenRules"],
+  			"PossessionGreaterThanFiveKG":["TNF1882Sec28A","TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982","GenRules","TNRWBI2010"]
+  		}
+  },
+  SandalURL: {
+    "AttemptToTransport": [
+    	"0)TN.F.Act 1882 Sec.$26,36A,36B,36C,41,51,49A,49B,49G,56,",
+    	"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),10,"
+    ],
+    "VehicleTransport":[
+    	"0)TN.F.Act 1882 Sec.$26,35,36,36A,36B,36C,41,51,49A,49B,49G,56,56B,56C,56D,",
+    	"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),10,",
+    	"2)T.T.Rules 1968 Sec.$2,3(i),",
+    	"3)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,",
+    	"5)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,"
+    ],
+    	"PossessionLessThanFiveKG":[
+    	"0)TN.F.Act 1882 Sec.$26,35,36,36A,36B,36C,41,51,49A,49B,49G,56,56B,56C,56D,",
+    	"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),10,",
+    	"2)T.T.Rules 1968 Sec.$2,3(i),",
+    	"3)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
+    	"4)TN.S.W.Possession Rules 1970 Sec.$2,3,",
+    	"5)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+    	"6)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,"
+    ],
+    "PossessionGreaterThanFiveKG": [
+    	"0)TN.F.Act 1882 Sec.$26,35,36,36A,36B,36C,41,51,49A,49B,49G,56,56B,56C,56D,",
+    	"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),10,",
+    	"2)T.T.Rules 1968 Sec.$2,3(i),7,",
+    	"3)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
+    	"4)TN.S.W.Possession Rules 1970 Sec.$2,3,",
+    	"5)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+    	"6)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,Note:\n Add Sec. 3 – if exceed 0.50 c.mtr,",
+    	"7)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,"
+    ],
+    "PenaltyObjectName":{
+    	"AttemptToTransport":["TNF1882Sec35B","TNF1882Sec36E","GenRules"],
+    	"VehicleTransport":["TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982","GenRules"],
+    	"PossessionLessThanFiveKG":["TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982","GenRules"],
+    	"PossessionGreaterThanFiveKG":["TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982","GenRules","TNRWBI2010"]
+    }
+  },
+  SandalPattaOther: {
+	"AttemptToTransport": ["Not Applicable,"],
+	"VehicleTransport": ["Not Applicable,"],
+  "PossessionLessThanFiveKG":[
+			"0)TN.F.Act 1882 Sec.$35,36,36A,36B,36C,36F,41,51,49A,49B,49G,56,56B,56C,56D,",
+			"1)T.T.Rules 1968 Sec.$2,3(ii),",
+			"2)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
+			"3)TN.S.W.Possession Rules 1970 Sec.$2,3,",
+			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,",
+			"5)TN.S.W.Trees on Patta Land Rules 2008 Sec.$2,3,5(3),",
+			"6)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,"
+	],
+  "PossessionGreaterThanFiveKG":[
+		"0)TN.F.Act 1882 Sec.$35,36,36A,36B,36C,36F,41,51,49A,49B,49G,56,56B,56C,56D,",
+		"1)T.T.Rules 1968 Sec.$2,3(ii),7,",
+		"2)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
+		"3)TN.S.W.Possession Rules 1970 Sec.$2,3,",
+		"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,Note:\n Add Sec. 3 – if exceed 0.50 c.mtr,",
+		"5)TN.S.W.Trees on Patta Land Rules 2008 Sec.$2,3,5(3),",
+		"6)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+		"7)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,"
+	],
+	"PenaltyObjectName":{
+		"AttemptToTransport":["NA"],
+		"VehicleTransport":["NA"],
+		"PossessionLessThanFiveKG":["TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982"],
+		"PossessionGreaterThanFiveKG":["TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982","TNRWBI2010"]
+	}
+      },
+  SandalPattaPP: {
 		"AttemptToTransport": ["Not Applicable,"],
 		"VehicleTransport": ["Not Applicable,"],
-	        "PossessionLessThanFiveKG":[
+	  "PossessionLessThanFiveKG":[
 			"0)TN.F.Act 1882 Sec.$35,36,36A,36B,36C,36F,41,51,49A,49B,49G,56,56B,56C,56D,",
 			"1)T.T.Rules 1968 Sec.$2,3(ii),",
 			"2)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
@@ -516,7 +550,7 @@ var forestOffenceSections = {
 			"5)TN.S.W.Trees on Patta Land Rules 2008 Sec.$2,3,5(3),",
 			"6)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,"
 		],
-	        "PossessionGreaterThanFiveKG":[
+	  "PossessionGreaterThanFiveKG":[
 			"0)TN.F.Act 1882 Sec.$35,36,36A,36B,36C,36F,41,51,49A,49B,49G,56,56B,56C,56D,",
 			"1)T.T.Rules 1968 Sec.$2,3(ii),7,",
 			"2)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
@@ -527,74 +561,45 @@ var forestOffenceSections = {
 			"7)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,"
 		],
 		"PenaltyObjectName":{
-			"AttemptToTransport":[],
-			"VehicleTransport":[],
+			"AttemptToTransport":["NA"],
+			"VehicleTransport":["NA"],
 			"PossessionLessThanFiveKG":["TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982"],
 			"PossessionGreaterThanFiveKG":["TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982","TNRWBI2010"]
 		}
-        },
-        SandalPattaPP: {
+  },
+  SandalPattaHP: {
 		"AttemptToTransport": ["Not Applicable,"],
 		"VehicleTransport": ["Not Applicable,"],
-	        "PossessionLessThanFiveKG":[
-			"0)TN.F.Act 1882 Sec.$35,36,36A,36B,36C,36F,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)T.T.Rules 1968 Sec.$2,3(ii),",
-			"2)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
-			"3)TN.S.W.Possession Rules 1970 Sec.$2,3,",
-			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,",
-			"5)TN.S.W.Trees on Patta Land Rules 2008 Sec.$2,3,5(3),",
-			"6)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,"
+	  "PossessionLessThanFiveKG":[
+  			"0)TN.F.Act 1882 Sec.$35,36,36A,36B,36C,36F,41,51,49A,49B,49G,56,56B,56C,56D,",
+  			"1)T.T.Rules 1968 Sec.$2,3(ii),",
+  			"2)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
+  			"3)TN.S.W.Possession Rules 1970 Sec.$2,3,",
+  			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,",
+  			"5)TN.S.W.Trees on Patta Land Rules 2008 Sec.$2,3,5(3),",
+  			"6)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,"
 		],
-	        "PossessionGreaterThanFiveKG":[
-			"0)TN.F.Act 1882 Sec.$35,36,36A,36B,36C,36F,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)T.T.Rules 1968 Sec.$2,3(ii),7,",
-			"2)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
-			"3)TN.S.W.Possession Rules 1970 Sec.$2,3,",
-			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,Note:\n Add Sec. 3 – if exceed 0.50 c.mtr,",
-			"5)TN.S.W.Trees on Patta Land Rules 2008 Sec.$2,3,5(3),",
-			"6)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"7)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,"
+	  "PossessionGreaterThanFiveKG":[
+  			"0)TN.F.Act 1882 Sec.$35,36,36A,36B,36C,36F,41,51,49A,49B,49G,56,56B,56C,56D,",
+  			"1)T.T.Rules 1968 Sec.$2,3(ii),7,",
+  			"2)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
+  			"3)TN.S.W.Possession Rules 1970 Sec.$2,3,",
+  			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,Note:\n Add Sec. 3 – if exceed 0.50 c.mtr,",
+  			"5)TN.S.W.Trees on Patta Land Rules 2008 Sec.$2,3,5(3),",
+  			"6)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+  			"7)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,"
 		],
 		"PenaltyObjectName":{
-			"AttemptToTransport":[],
-			"VehicleTransport":[],
-			"PossessionLessThanFiveKG":["TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982"],
-			"PossessionGreaterThanFiveKG":["TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982","TNRWBI2010"]
+  			"AttemptToTransport":["NA"],
+  			"VehicleTransport":["NA"],
+  			"PossessionLessThanFiveKG":["TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982"],
+  			"PossessionGreaterThanFiveKG":["TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982","TNRWBI2010"]
 		}
-        },
-        SandalPattaHP: {
+  },
+  SandalPattaTT: {
 		"AttemptToTransport": ["Not Applicable,"],
 		"VehicleTransport": ["Not Applicable,"],
-	        "PossessionLessThanFiveKG":[
-			"0)TN.F.Act 1882 Sec.$35,36,36A,36B,36C,36F,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)T.T.Rules 1968 Sec.$2,3(ii),",
-			"2)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
-			"3)TN.S.W.Possession Rules 1970 Sec.$2,3,",
-			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,",
-			"5)TN.S.W.Trees on Patta Land Rules 2008 Sec.$2,3,5(3),",
-			"6)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,"
-		],
-	        "PossessionGreaterThanFiveKG":[
-			"0)TN.F.Act 1882 Sec.$35,36,36A,36B,36C,36F,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)T.T.Rules 1968 Sec.$2,3(ii),7,",
-			"2)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
-			"3)TN.S.W.Possession Rules 1970 Sec.$2,3,",
-			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,Note:\n Add Sec. 3 – if exceed 0.50 c.mtr,",
-			"5)TN.S.W.Trees on Patta Land Rules 2008 Sec.$2,3,5(3),",
-			"6)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"7)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,"
-		],
-		"PenaltyObjectName":{
-			"AttemptToTransport":[],
-			"VehicleTransport":[],
-			"PossessionLessThanFiveKG":["TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982"],
-			"PossessionGreaterThanFiveKG":["TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982","TNRWBI2010"]
-		}
-        },
-        SandalPattaTT: {
-		"AttemptToTransport": ["Not Applicable,"],
-		"VehicleTransport": ["Not Applicable,"],
-	        "RoyaltiesPossession":[
+	  "RoyaltiesPossession":[
 			"0)TN.F.Act 1882 Sec.$26(h),35,36,36A,36B,36C,36F,40G,41,51,49A,49B,49G,56,56B,56C,56D,",
 			"1)T.T.Rules 1968 Sec.$2,3(ii),4,5,",
 			"2)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
@@ -603,7 +608,7 @@ var forestOffenceSections = {
 			"5)TN.S.W.Trees on Patta Land Rules 2008 Sec.$2,3,5(3),",
 			"6)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,"
 		],
-	        "PossessionLessThanFiveKG":[
+	  "PossessionLessThanFiveKG":[
 			"0)TN.F.Act 1882 Sec.$26(h),35,36,36A,36B,36C,36F,40G,41,51,49A,49B,49G,56,56B,56C,56D,",
 			"1)T.T.Rules 1968 Sec.$2,3(ii),4,5,",
 			"2)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
@@ -612,7 +617,7 @@ var forestOffenceSections = {
 			"5)TN.S.W.Trees on Patta Land Rules 2008 Sec.$2,3,5(3),",
 			"6)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,"
 		],
-	        "PossessionGreaterThanFiveKG":[
+	  "PossessionGreaterThanFiveKG":[
 			"0)TN.F.Act 1882 Sec.$26(h),35,36,36A,36B,36C,36F,40G,41,51,49A,49B,49G,56,56B,56C,56D,",
 			"1)T.T.Rules 1968 Sec.$2,3(ii),4,5,7,",
 			"2)TN.S.W.Transit Rules 1967 Sec.$2,3,4,6,7,9,",
@@ -623,13 +628,13 @@ var forestOffenceSections = {
 			"7)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,"
 		],
 		"PenaltyObjectName":{
-			"AttemptToTransport":[],
-			"VehicleTransport":[],
+			"AttemptToTransport":["NA"],
+			"VehicleTransport":["NA"],
 			"RoyaltiesPossession":["TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982"],
 			"PossessionLessThanFiveKG":["TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982"],
 			"PossessionGreaterThanFiveKG":["TNF1882Sec35B","TNF1882Sec36E","TNTMCO1982","TNRWBI2010"]
 		}
-        },
+  },
 	SandalTRCore:{
 		"TRCoreAreaOffence": [
 			"0)TN.F.Act 1882 Sec.$21(d)(e)(f),35,36,36A,36B,36C,41,51,49A,49B,49G,56,56B,56C,56D,",
@@ -693,41 +698,41 @@ var forestOffenceSections = {
 			"PossessionGreaterThanFiveKG":["TNF1882Sec21(1)","TNF1882Sec21(i)","TNF1882Sec35B","TNTMCO1982","TNRWBI2010"]
 		}
         },
-        RedSandalRL: {
-		"AttemptToTransport": [ 
-			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),41,51,49A,49B,49G,56,",
-			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),"
-		],
-		"VehicleTransport":[
-			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),35,36,41,49A,49B,49G,56,56B,56C,56D,",
-			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),",
-			"2)T.T.Rules 1968 Sec.$2,3(i),9,",
-			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,"
-		],
- 		"PossessionLessThanFiveKG":[
-			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),",
-			"2)T.T.Rules 1968 Sec.$2,3(i),9,",
-			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"4)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,",
-			"5)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,"
-		],
-		"PossessionGreaterThanFiveKG": [
-			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),",
-			"2)T.T.Rules 1968 Sec.$2,3(i),7,9,",
-			"3)TN. Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"4)TN. Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,",
-			"5)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,Note:\n Add Sec. 3 – if exceed 0.50 c.mtr,"
-		],
-		"PenaltyObjectName":{
-			"AttemptToTransport":["TNF1882Sec28A","GenRules"],
-			"VehicleTransport":["TNF1882Sec28A","TNF1882Sec35B","TNTMCO1982","GenRules"],
-			"PossessionLessThanFiveKG":["TNF1882Sec28A","TNF1882Sec35B","TNTMCO1982","GenRules","TNRWBI2010"],
-			"PossessionLessThanFiveKG":["TNF1882Sec28A","TNF1882Sec35B","TNTMCO1982","GenRules","TNRWBI2010"]
-		}
+  RedSandalRL: {
+        		"AttemptToTransport": [
+        			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),41,51,49A,49B,49G,56,",
+        			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),"
+        		],
+        		"VehicleTransport":[
+        			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),35,36,41,49A,49B,49G,56,56B,56C,56D,",
+        			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),",
+        			"2)T.T.Rules 1968 Sec.$2,3(i),9,",
+        			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,"
+        		],
+         		"PossessionLessThanFiveKG":[
+        			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
+        			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),",
+        			"2)T.T.Rules 1968 Sec.$2,3(i),9,",
+        			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+        			"4)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,",
+        			"5)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,"
+        		],
+        		"PossessionGreaterThanFiveKG": [
+        			"0)TN.F.Act 1882 Sec.$26(c)(d)(g),35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
+        			"1)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),",
+        			"2)T.T.Rules 1968 Sec.$2,3(i),7,9,",
+        			"3)TN. Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+        			"4)TN. Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,",
+        			"5)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,Note:\n Add Sec. 3 – if exceed 0.50 c.mtr,"
+        		],
+        		"PenaltyObjectName":{
+        			"AttemptToTransport":["TNF1882Sec28A","GenRules"],
+        			"VehicleTransport":["TNF1882Sec28A","TNF1882Sec35B","TNTMCO1982","GenRules"],
+        			"PossessionLessThanFiveKG":["TNF1882Sec28A","TNF1882Sec35B","TNTMCO1982","GenRules"],
+        			"PossessionGreaterThanFiveKG":["TNF1882Sec28A","TNF1882Sec35B","TNTMCO1982","GenRules","TNRWBI2010"]
+        		}
         },
-        RedSandalURL: {
+  RedSandalURL: {
 		"AttemptToTransport": [
 			"0)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),10,",
 			"1)TN.F.Act 1882 Sec.$26,41,51,49A,49B,49G,56,"
@@ -761,120 +766,120 @@ var forestOffenceSections = {
 			"PossessionGreaterThanFiveKG":["TNF1882Sec35B","TNTMCO1982","GenRules","TNRWBI2010"]
 		}
         },
-        RedSandalPattaOther: {
-		"AttemptToTransport": ["Not Applicable,"],
-		"VehicleTransport": [
-			"0)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)T.T.Rules 1968 Sec.$2,3(ii),9,",
-			"2)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"3)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,3A,4,"
-		],
-	        "PossessionLessThanFiveKG":[
-			"0)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)T.T.Rules 1968 Sec.$2,3(ii),9,",
-			"2)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"3)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,",
-			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,3A,4,"
-		],
-	        "PossessionGreaterThanFiveKG":[
-			"0)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"1)T.T.Rules 1968 Sec.$2,3(ii),7,9,",
-			"2)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"3)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,",
-			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,3A,4,Note:\n Add Sec. 3 – if exceed 0.50 c.mtr,"
-		],
-		"PenaltyObjectName":{
-			"AttemptToTransport":[],
-			"VehicleTransport":["TNF1882Sec35B","TNTMCO1982"],
-			"PossessionLessThanFiveKG":["TNF1882Sec35B","TNTMCO1982","TNRWBI2010"],
-			"PossessionGreaterThanFiveKG":["TNF1882Sec35B","TNTMCO1982","TNRWBI2010"]
-		}
-        },
-        RedSandalPattaPP: {
-		"AttemptToTransport": ["Not Applicable,"],
-		"VehicleTransport": [
-			"0)TN.Preservation of Private Forest Act 1949 Sec.$1,2,6,6A,7,",
-			"1)TN.Preservation of Private Forest Rules 1946 Sec.$4,",
-			"2)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"3)T.T.Rules 1968 Sec.$2,3(ii),9,",
-			"4)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"5)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,"
-		],
-	        "PossessionLessThanFiveKG":[
-			"0)TN.Preservation of Private Forest Act 1949 Sec.$1,2,6,6A,7,",
-			"1)TN.Preservation of Private Forest Rules 1946 Sec.$4,",
-			"2)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"3)T.T.Rules 1968 Sec.$2,3(ii),9,",
-			"4)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"5)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,",
-			"6)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,"
-		],
-	        "PossessionGreaterThanFiveKG":[
-			"0)TN.Preservation of Private Forest Act 1949 Sec.$1,2,6,6A,7,",
-			"1)TN.Preservation of Private Forest Rules 1946 Sec.$4,",
-			"2)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"3)T.T.Rules 1968 Sec.$2,3(ii),7,9,",
-			"4)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"5)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,",
-			"6)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,Note:\n Add Sec. 3 – if exceed 0.50 c.mtr,"
-		],
-		"PenaltyObjectName":{
-			"AttemptToTransport":[],
-			"VehicleTransport":["TNF1882Sec35B","TNTMCO1982"],
-			"PossessionLessThanFiveKG":["TNF1882Sec35B","TNTMCO1982","TNPPF1949"],
-			"PossessionGreaterThanFiveKG":["TNF1882Sec35B","TNTMCO1982","TNRWBI2010","TNPPF1949"],
-		}
-        },
-        RedSandalPattaHP: {
-		"AttemptToTransport": ["Not Applicable,"],
-		"VehicleTransport": [
-			"0)TN.Hill Preservation of Trees Act 1955 Sec.$2,3,5,7,11,",
-			"1)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"2)T.T.Rules 1968 Sec.$2,3(ii),9,",
-			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,"
-		],
-	        "PossessionLessThanFiveKG":[
-			"0)TN.Hill Preservation of Trees Act 1955 Sec.$2,3,5,7,11,",
-			"1)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"2)T.T.Rules 1968 Sec.$2,3(ii),9,",
-			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,",
-			"5)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,"
-		],
-	        "PossessionGreaterThanFiveKG":[
-			"0)TN.Hill Preservation of Trees Act 1955 Sec.$2,3,5,7,11,",
-			"1)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
-			"2)T.T.Rules 1968 Sec.$2,3(ii),7,9,",
-			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
-			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,Note:\n Add Sec. 3 – if exceed 0.50 c.mtr,",
-			"5)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,"
-		],
-		"PenaltyObjectName":{
-			"AttemptToTransport":[],
-			"VehicleTransport":["TNF1882Sec35B","TNTMCO1982","TNHP1955"],
-			"PossessionLessThanFiveKG":["TNF1882Sec35B","TNTMCO1982","TNHP1955"],
-			"PossessionGreaterThanFiveKG":["TNF1882Sec35B","TNTMCO1982","TNRWBI2010","TNHP1955"],
-		}
-        },
-        RedSandalPattaTT: {
+  RedSandalPattaOther: {
+  		"AttemptToTransport": ["Not Applicable,"],
+  		"VehicleTransport": [
+  			"0)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
+  			"1)T.T.Rules 1968 Sec.$2,3(ii),9,",
+  			"2)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+  			"3)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,3A,4,"
+  		],
+  	  "PossessionLessThanFiveKG":[
+    			"0)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
+    			"1)T.T.Rules 1968 Sec.$2,3(ii),9,",
+    			"2)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+    			"3)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,",
+    			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,3A,4,"
+  		],
+  	  "PossessionGreaterThanFiveKG":[
+    			"0)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
+    			"1)T.T.Rules 1968 Sec.$2,3(ii),7,9,",
+    			"2)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+    			"3)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,",
+    			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,3A,4,Note:\n Add Sec. 3 – if exceed 0.50 c.mtr,"
+  		],
+  		"PenaltyObjectName":{
+  			"AttemptToTransport":["NA"],
+  			"VehicleTransport":["TNF1882Sec35B","TNTMCO1982"],
+  			"PossessionLessThanFiveKG":["TNF1882Sec35B","TNTMCO1982","TNRWBI2010"],
+  			"PossessionGreaterThanFiveKG":["TNF1882Sec35B","TNTMCO1982","TNRWBI2010"]
+  		}
+  },
+  RedSandalPattaPP: {
+  		"AttemptToTransport": ["Not Applicable,"],
+  		"VehicleTransport": [
+        "0)TN.Preservation of Private Forest Act 1949 Sec.$1,2,6,6A,7,",
+        "1)TN.Preservation of Private Forest Rules 1946 Sec.$4,",
+        "2)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
+        "3)T.T.Rules 1968 Sec.$2,3(ii),9,",
+        "4)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+        "5)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,"
+  		],
+  	  "PossessionLessThanFiveKG":[
+          "0)TN.Preservation of Private Forest Act 1949 Sec.$1,2,6,6A,7,",
+          "1)TN.Preservation of Private Forest Rules 1946 Sec.$4,",
+          "2)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
+          "3)T.T.Rules 1968 Sec.$2,3(ii),9,",
+          "4)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+          "5)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,",
+          "6)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,"
+  		],
+  	  "PossessionGreaterThanFiveKG":[
+          "0)TN.Preservation of Private Forest Act 1949 Sec.$1,2,6,6A,7,",
+          "1)TN.Preservation of Private Forest Rules 1946 Sec.$4,",
+          "2)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
+          "3)T.T.Rules 1968 Sec.$2,3(ii),7,9,",
+          "4)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+          "5)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,",
+          "6)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,Note:\n Add Sec. 3 – if exceed 0.50 c.mtr,"
+  		],
+  		"PenaltyObjectName":{
+  			"AttemptToTransport":["NA"],
+  			"VehicleTransport":["TNF1882Sec35B","TNTMCO1982"],
+  			"PossessionLessThanFiveKG":["TNF1882Sec35B","TNTMCO1982","TNPPF1949"],
+  			"PossessionGreaterThanFiveKG":["TNF1882Sec35B","TNTMCO1982","TNRWBI2010","TNPPF1949"],
+  		}
+  },
+  RedSandalPattaHP: {
+  		"AttemptToTransport": ["Not Applicable,"],
+  		"VehicleTransport": [
+    			"0)TN.Hill Preservation of Trees Act 1955 Sec.$2,3,5,7,11,",
+    			"1)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
+    			"2)T.T.Rules 1968 Sec.$2,3(ii),9,",
+    			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+    			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,"
+  		],
+  	  "PossessionLessThanFiveKG":[
+    			"0)TN.Hill Preservation of Trees Act 1955 Sec.$2,3,5,7,11,",
+    			"1)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
+    			"2)T.T.Rules 1968 Sec.$2,3(ii),9,",
+    			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+    			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,",
+    			"5)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,"
+  		],
+      "PossessionGreaterThanFiveKG":[
+    			"0)TN.Hill Preservation of Trees Act 1955 Sec.$2,3,5,7,11,",
+    			"1)TN.F.Act 1882 Sec.$35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
+    			"2)T.T.Rules 1968 Sec.$2,3(ii),7,9,",
+    			"3)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
+    			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,Note:\n Add Sec. 3 – if exceed 0.50 c.mtr,",
+    			"5)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,"
+  		],
+  		"PenaltyObjectName":{
+    			"AttemptToTransport":["NA"],
+    			"VehicleTransport":["TNF1882Sec35B","TNTMCO1982","TNHP1955"],
+    			"PossessionLessThanFiveKG":["TNF1882Sec35B","TNTMCO1982","TNHP1955"],
+    			"PossessionGreaterThanFiveKG":["TNF1882Sec35B","TNTMCO1982","TNRWBI2010","TNHP1955"]
+  		}
+    },
+  RedSandalPattaTT: {
 		"AttemptToTransport": ["Not Applicable,"],
 		"VehicleTransport": ["Not Applicable,"],
-	        "RoyaltiesPossession":[
+	  "RoyaltiesPossession":[
 			"0)TN.F.Act 1882 Sec.$26(h),35,36,40G,41,51,49A,49B,49G,56,56B,56C,56D,",
 			"1)T.T.Rules 1968 Sec.$2,3(ii),4,5,7,9,",
 			"2)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
 			"3)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,",
 			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,4,Note:\n Add Sec. 3 – if exceed 0.50 c.mtr,"
 		],
-	        "PossessionLessThanFiveKG":[
+	  "PossessionLessThanFiveKG":[
 			"0)TN.F.Act 1882 Sec.$26(h),35,36,40G,41,51,49A,49B,49G,56,56B,56C,56D,",
 			"1)T.T.Rules 1968 Sec.$2,3(ii),4,5,9,",
 			"2)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
 			"3)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,",
 			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,3A,4,"
 		],
-	        "PossessionGreaterThanFiveKG":[
+	  "PossessionGreaterThanFiveKG":[
 			"0)TN.F.Act 1882 Sec.$26(h),35,36,40G,41,51,49A,49B,49G,56,56B,56C,56D,",
 			"1)T.T.Rules 1968 Sec.$2,3(ii),4,5,7,9,",
 			"2)TN.Timber (Movement Control) Order 1982 Sec.$2,3,4,",
@@ -882,11 +887,13 @@ var forestOffenceSections = {
 			"4)TN.M. a/c. S.T. for Indu. or Comm. Rules 1988 Sec.$2,3A,4,Note:\n Add Sec. 3 – if exceed 0.50 c.mtr,"
 		],
 		"PenaltyObjectName":{
+      "AttemptToTransport":["NA"],
+      "VehicleTransport":["NA"],
 			"RoyaltiesPossession":["TNF1882Sec35B","TNTMCO1982","TNRWBI2010"],
 			"PossessionLessThanFiveKG":["TNF1882Sec35B","TNTMCO1982","TNRWBI2010"],
 			"PossessionGreaterThanFiveKG":["TNF1882Sec35B","TNTMCO1982","TNRWBI2010"]
 		}
-        },
+  },
 	RedSandalTRCore:{
 		"TRCoreAreaOffence": [
 			"0)TN.F.Act 1882 Sec.$21(d)(e)(f),35,36,41,51,49A,49B,49G,56,56B,56C,56D,",
@@ -936,9 +943,9 @@ var forestOffenceSections = {
 			"VehicleTransport":["TNF1882Sec21(2)","TNTMCO1982"],
 			"Possession":["TNF1882Sec21(2)","TNTMCO1982","TNRWBI2010"]
 		}
-        },
-        ExemptedSpeciesRL: {
-		"AttemptToTransport": [ 
+  },
+  ExemptedSpeciesRL: {
+		"AttemptToTransport": [
 			"0)TN.F.Act 1882 Sec.$26(c),41,51,56,",
 			"4)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),"
 
@@ -961,8 +968,8 @@ var forestOffenceSections = {
 			"VehicleTransport":["TNF1882Sec28A(2)","TNTMCO1982"],
 			"Possession":["TNF1882Sec28A(2)","TNTMCO1982","TNRWBI2010"]
 		}
-        },
-        ExemptedSpeciesURL: {
+  },
+  ExemptedSpeciesURL: {
 		"AttemptToTransport": [
 			"0)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),10,",
 			"1)TN.F.Act 1882 Sec.$26,41,51,56,"
@@ -985,17 +992,17 @@ var forestOffenceSections = {
 			"VehicleTransport":["TNF1882Sec28A(2)","TNTMCO1982","GenRules"],
 			"Possession":["TNF1882Sec28A(2)","TNTMCO1982","TNRWBI2010","GenRules"]
 		}
-        },
-        ExemptedSpeciesPattaOther: {
+  },
+  ExemptedSpeciesPattaOther: {
 		"AttemptToTransport": ["Not Applicable,"],
 		"VehicleTransport": ["Not Applicable,"],
-	        "Possession":["Not Applicable,"],
+	  "Possession":["Not Applicable,"],
 		"PenaltyObjectName":{
-			"AttemptToTransport":[],
-			"VehicleTransport":[],
-			"Possession":[]
+			"AttemptToTransport":["NA"],
+			"VehicleTransport":["NA"],
+			"Possession":["NA"]
 		}
-        },
+  },
 	ExemptedSpeciesTRCore:{
 		"TRCoreAreaOffence": [
 			"0)TN.F.Act 1882 Sec.$21(d)(e)(f),41,51,56,",
@@ -1032,12 +1039,11 @@ var forestOffenceSections = {
 			"VehicleTransport":["TNF1882Sec21(2)","TNTMCO1982"],
 			"Possession":["TNF1882Sec21(2)","TNTMCO1982","TNRWBI2010"]
 		}
-        },
-        NonExemptedSpeciesRL: {
-		"AttemptToTransport": [ 
+  },
+  NonExemptedSpeciesRL: {
+		"AttemptToTransport": [
 			"0)TN.F.Act 1882 Sec.$26(c),41,51,56,",
 			"4)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),"
-
 		],
 		"VehicleTransport":[
 			"0)TN.F.Act 1882 Sec.$26(c),35,36,41,51,56,",
@@ -1058,7 +1064,7 @@ var forestOffenceSections = {
 			"Possession":["TNF1882Sec28A(2)","TNTMCO1982","TNRWBI2010"]
 		}
         },
-        NonExemptedSpeciesURL: {
+  NonExemptedSpeciesURL: {
 		"AttemptToTransport": [
 			"0)General Rules for the Mgt of RL and URL (i.e) rules under sec.26 of TN.F.Act 1882 Sec.$1,2,3,9(a)(b),10,",
 			"1)TN.F.Act 1882 Sec.$26,41,51,56,"
@@ -1082,7 +1088,7 @@ var forestOffenceSections = {
 			"Possession":["TNF1882Sec28A(2)","TNTMCO1982","TNRWBI2010","GenRules"]
 		}
         },
-        NonExemptedSpeciesPattaOther: {
+  NonExemptedSpeciesPattaOther: {
 		"AttemptToTransport": ["Not Applicable,"],
 		"VehicleTransport": [
 			"0)TN.F.Act 1882 Sec.$35,36,41,51,",
@@ -1096,11 +1102,11 @@ var forestOffenceSections = {
 			"3)TN.Regulation of Wood Based Ind. Rules 2010 Sec.$2(h),7,8,13,"
 		],
 		"PenaltyObjectName":{
-			"AttemptToTransport":[],
+			"AttemptToTransport":["NA"],
 			"VehicleTransport":["TNF1882Sec28A(2)","TNTMCO1982","TNRWBI2010"],
 			"Possession":["TNF1882Sec28A(2)","TNTMCO1982","TNRWBI2010"]
 		}
-        },
+  },
 	NonExemptedSpeciesTRCore:{
 		"TRCoreAreaOffence": [
 			"0)TN.F.Act 1882 Sec.$21(d)(e)(f),41,51,56,",
@@ -1174,16 +1180,20 @@ var forestOffenceSections = {
 			"4)Constitution of India Article 51A(g),"
 		],
 		"PenaltyObjectName":{
-			"Possession":[],
-			"PossessionNRIForeigner":[],
-			"IllegalSeekingIP":[],
-			"IllegalTransferKnowledge":[],
+			"Possession":["NA"],
+			"PossessionNRIForeigner":["NA"],
+			"IllegalSeekingIP":["NA"],
+			"IllegalTransferKnowledge":["NA"],
 			"BreakingDisobeyOrder":["BD2002-56","WLCOMMON"]
 		}
 	}
 }
 
 var forestOffencePenalty = {
+  "NA":{
+    "Penalty":["Not Applicable.","."],
+    "ImprisonmentAndFine": ["Not Applicable"]
+  },
 	"TRCore":{
 		"Penalty":["WL(P) Act 1972 Sec.","51(1C)(1D)"],
 		"ImprisonmentAndFine": ["1)First Offence:Shall be 3 Years, May be 7 Years and ₹50000 may be 200000.\n\nSecond Offence onwards: Shall be 7 Years and ₹500000, May be ₹5000000"]

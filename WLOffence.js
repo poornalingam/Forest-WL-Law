@@ -18,7 +18,7 @@ var wlOffenceSections = {
 		Definition : "21,",
 		Main : "27,28,31,34,35,35(6),35(8),38,54,54(4),"
 	},
-	Sanctuary : { 
+	Sanctuary : {
 		Definition : "26,",
 		Main : "26A,27,28,29,31,38,54,54(4),"
 	},
@@ -55,7 +55,7 @@ var wlOffenceSections = {
 		Main : "40,42,44,49,"
 	},
 	Trading : {
-		Definition : "2,5,11,18,19,23,30,31,32,33,", 
+		Definition : "2,5,11,18,19,23,30,31,32,33,",
 		Main : "9,40,42,44,44(1)(a),44(1)(c),47,48,49,43,48A,"
 	},
 	MeatServing : {
@@ -89,7 +89,7 @@ var wlOffenceSections = {
 	InjuriousSubstances : {
 		Definition : "",
 		Main : "32,"
-	},  
+	},
 	TrespassAndHalting : {
 		Definition : "",
 		Main : "27,28,"
