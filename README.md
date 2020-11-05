@@ -55,13 +55,21 @@ Seizure List in Form H, Measurement List, Confession Statement, Spot Magazar (Po
 ## Why PDF interactive form was selected to meet this requirement
 "Interactive PDF form" solution has been chosen to implement these requirements to ensure the security of its user's activity in personal computer, to work without internet connectivity and use mostly available software in personal computer to avoid additional installation. From the security perspective, PDF readers don't allow to save file/data in local storage, and don't allow to track or monitor the users mobile/desktop activities in foreground or background. Mobile application or Web application will be a backbox for it's users and potential to track users' other activities and their movements. To maintain safety and security, this PDF form application won't allow to save file/data locally other than one predefined file said in this document. Even this functionality is prohibited in Adobe PDF reader/Writer. Few PDF readers, allow to save the file in predefined location with predefined file name. PDF interactive form has been chosen based on these criteria.  
 
-## For contributors: Who are interested to add more capabilities or customize the application to meet their requirement
+# For contributors
+## Who are interested to add more capabilities or customize the application to meet their requirement
 Forest-WL-Law application is built with PDF javascript APIs. Package layout section contains the instructions for this OSS code. Those who want an application for other state need to customize the `forestOffence.js` file with their appropriate law. Use `Adobe PDF writer` or `Foxit PhantomPDF` to add the given `javascript` files for customization or enhancement.
 
 ### Area for contribution
-Each south state has their own forest law derived from Madras Forest Act and Most of the other Indian states follow Indian forest Act 1927. Create a state specific `ForestOffence.js` file with your state specific law knowledge to customize this application for your state. Please raise a git issue if there is a prosecution procedure difference in your state.  
+* Each south indian state has their own forest law derived from Madras Forest Act and Most of the other Indian states follow Indian forest Act 1927. Create a state specific `ForestOffence.js` file with your state specific law knowledge to customize this application for the concern state. Please raise a git issue if there is a prosecution procedure difference in your state.
+* Create the following Rest API
+1. Make the POST call to load this interactive form data (json object) to external site, along with `oAuth`.
+2. GET method to query the violation law section (Generic)  with four arguments `GET (OffenceLocation,ForestProduce,NatureOfOffence[],CompanyInvolved)` Which needs to return `ViolationOfLaw,PunishmentSection,PunishmentPeriod`
+3. GET Method to check whether the an offence is compoundable offence `GET (OffenceLocation, ForestProduce, NatureOfOffence[],ValueOfSeizedForestProduce,VolumeOfSeizedForestProduce)` which needs to return compoundable message, reason, section and compounding procedure
+4. GET Method to generate report prosecution documents. It must accept the json file as input object to generate report
 
-### Package Layout
+Create an issue in this repository for other requirement
+
+## Package Layout
 ```
 ├── README.md                                   # This file
 ├── Forest and WL Offence Booking.PDF           # Interactive form (dropdowns/list box/push button selection triggers action event or item change event)      
